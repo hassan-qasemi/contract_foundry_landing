@@ -34,14 +34,8 @@ class ContactMeButton extends StatelessWidget {
 }
 
 const _aboutText = '''
-Contract Foundry is a blockchain-powered platform providing businesses with
-decentralized tools for automating smart contracts, managing self-sovereign
-digital identities, verifying tamper-proof credentials, and securing digital
-signatures.
-
-It eliminates intermediaries, enhances trust, and ensures
-transparency in business operations, driving efficiency and security in the
-Web3 era.
+Contract Foundry provides blockchain modules as scalable business solutions,
+SLC's and SSI's.  
 
 contact us at contractfoundry@gmail.com
  ''';
