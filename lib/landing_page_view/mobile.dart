@@ -61,20 +61,32 @@ class LandingPageMobile extends StatelessWidget {
                                   .copyWith(color: context.primaryColor))
                         ],
                       )),
+                  SizedBox(height: 20),
+                  Padding(
+                      padding: EdgeInsets.symmetric(horizontal: w * .2),
+                      child: Wrap(
+                        children: [
+                          Text('Launching Soon',
+                              textAlign: TextAlign.center,
+                              style: context.bodyLarge!.copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold))
+                        ],
+                      )),
                   const Expanded(child: SizedBox()),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       const Expanded(child: SizedBox()),
-                      TextButton(
-                          onPressed: () async {
-                            await launchUrlString(Links.whitePaperLink);
-                          },
-                          child: Text(
-                            'Get White paper',
-                            style: context.bodyMedium!
-                                .copyWith(color: Colors.white),
-                          )),
+                      // TextButton(
+                      //     onPressed: () async {
+                      //       await launchUrlString(Links.whitePaperLink);
+                      //     },
+                      //     child: Text(
+                      //       'Get White paper',
+                      //       style: context.bodyMedium!
+                      //           .copyWith(color: Colors.white),
+                      //     )),
                       SizedBox(
                         width: 4,
                       ),
