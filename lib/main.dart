@@ -24,6 +24,7 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Contract Foundry',
+      themeMode: ThemeMode.dark,
       darkTheme: ThemeData(
           useMaterial3: true,
           colorScheme: MaterialTheme.darkScheme(),

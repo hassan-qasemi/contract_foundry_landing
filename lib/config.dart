@@ -1,6 +1,6 @@
 class Links {
   static final String whitePaperLink =
-      'https://drive.google.com/file/d/1jGJyat2qTO2pyK492HTtzy1bFCBsmF6i/view?usp=sharing';
+      'https://drive.google.com/file/d/17MFv04f8Opt5IYMbbNq2YCV-EvjoYDcJ/view?usp=sharing';
   static final String waitlistLink =
       'https://contract-foundry-beta.my.canva.site/';
   static final String xLink = 'https://twitter.com/contractfoundry';

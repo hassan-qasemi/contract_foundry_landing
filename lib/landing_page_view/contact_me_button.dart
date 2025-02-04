@@ -43,5 +43,5 @@ It eliminates intermediaries, enhances trust, and ensures
 transparency in business operations, driving efficiency and security in the
 Web3 era.
 
-contact us at contractfoundry@outlook.com
+contact us at contractfoundry@gmail.com
  ''';
