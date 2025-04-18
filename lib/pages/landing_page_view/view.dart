@@ -1,5 +1,5 @@
-import 'package:contract_foundry_landing_page/landing_page_view/desktop.dart';
-import 'package:contract_foundry_landing_page/landing_page_view/mobile.dart';
+import 'package:contract_foundry_landing_page/pages/landing_page_view/desktop.dart';
+import 'package:contract_foundry_landing_page/pages/landing_page_view/mobile.dart';
 import 'package:flutter/material.dart';
 
 class LandingPageView extends StatelessWidget {

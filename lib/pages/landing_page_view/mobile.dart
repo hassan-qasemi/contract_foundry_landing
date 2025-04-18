@@ -1,7 +1,7 @@
 import 'package:contract_foundry_landing_page/config.dart';
-import 'package:contract_foundry_landing_page/landing_page_view/background.dart';
-import 'package:contract_foundry_landing_page/landing_page_view/contact_me_button.dart';
-import 'package:contract_foundry_landing_page/landing_page_view/social_links_widget.dart';
+import 'package:contract_foundry_landing_page/pages/landing_page_view/background.dart';
+import 'package:contract_foundry_landing_page/pages/landing_page_view/contact_me_button.dart';
+import 'package:contract_foundry_landing_page/pages/landing_page_view/social_links_widget.dart';
 import 'package:contract_foundry_landing_page/theme/text_theme_extensions.dart';
 import 'package:contract_foundry_landing_page/theme/theme_color_extension.dart';
 import 'package:flutter/material.dart';

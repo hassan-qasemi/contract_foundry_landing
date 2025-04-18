@@ -8,4 +8,5 @@ class Links {
       'https://bsky.app/profile/contractfoundry.bsky.social';
   static final String emailLink = 'contractfoundry@outlook.com';
   static final String mediumLink = 'https://medium.com/@contractfoundry/';
+  static final String appDownloadRepoAddress = '';
 }
