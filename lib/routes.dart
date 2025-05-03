@@ -16,8 +16,8 @@ final router = GoRouter(initialLocation: "/", routes: [
       builder: (context, state) {
         return FAQPageView();
       }),
-  GoRoute(
-      path: '/contract',
-      name: 'contract',
-      builder: (context, state) => ContarctPageView()),
+  // GoRoute(
+  //     path: '/contract/:did',
+  //     name: 'contract',
+  //     builder: (context, state) => ContarctPageView()),
 ]);

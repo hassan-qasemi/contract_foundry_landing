@@ -1,10 +1,12 @@
 import 'package:contract_foundry_landing_page/config.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/background.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/contact_me_button.dart';
+import 'package:contract_foundry_landing_page/pages/landing_page_view/contract_linker_search_bar.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/social_links_widget.dart';
 import 'package:contract_foundry_landing_page/theme/text_theme_extensions.dart';
 import 'package:contract_foundry_landing_page/theme/theme_color_extension.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import 'copyright_widget.dart';
@@ -26,7 +28,14 @@ class LandingPageMobile extends StatelessWidget {
           style: context.headlineSmall!
               .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
         ),
-        actions: [ContactMeButton()],
+        actions: [
+          ContactMeButton(),
+          TextButton(
+              onPressed: () {
+                context.goNamed('faq');
+              },
+              child: Text('FAQ'))
+        ],
       ),
       body: Stack(
         children: [
@@ -73,6 +82,8 @@ class LandingPageMobile extends StatelessWidget {
                                   fontWeight: FontWeight.bold))
                         ],
                       )),
+                  SizedBox(height: 20),
+                  ContractLinkerSearchBar(),
                   const Expanded(child: SizedBox()),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,

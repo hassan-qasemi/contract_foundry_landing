@@ -1,3 +1,4 @@
+import 'package:contract_foundry_landing_page/services/faq_handler/faq_handler.dart';
 import 'package:contract_foundry_landing_page/theme/color_scheme.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,8 @@ void main() {
   });
 
   usePathUrlStrategy();
+
+  WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const LandingPage());
 }

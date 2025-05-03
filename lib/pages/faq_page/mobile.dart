@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'form.dart';
 
@@ -12,6 +13,15 @@ class FAQPageMobileView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('FAQ'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        actions: [
+          TextButton(
+              onPressed: () {
+                context.go('/');
+              },
+              child: Text('Home'))
+        ],
       ),
       body: Container(
         height: h,
