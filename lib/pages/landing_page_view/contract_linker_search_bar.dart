@@ -1,5 +1,6 @@
+import 'package:contract_foundry_landing_page/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+import 'package:go_router/go_router.dart';
 
 class ContractLinkerSearchBar extends StatefulWidget {
   const ContractLinkerSearchBar({super.key});
@@ -18,8 +19,25 @@ class _ContractLinkerSearchBarState extends State<ContractLinkerSearchBar> {
     super.dispose();
   }
 
-  Future<void> _loadLink(String did) async {
-    await launchUrlString('https://contractfoundry.web.app/contract/$did');
+  void _linkContarctDID(String did) {
+    try {
+      checkDID(did);
+
+      context.go('/contract/$did');
+    } catch (err) {
+      showDialog(
+          context: context,
+          builder: (c) => AlertDialog(
+                content: ListTile(
+                  leading: const Icon(
+                    Icons.error_outline_outlined,
+                  ),
+                  title: Wrap(
+                    children: [Text(err.toString())],
+                  ),
+                ),
+              ));
+    }
   }
 
   @override
@@ -30,15 +48,15 @@ class _ContractLinkerSearchBarState extends State<ContractLinkerSearchBar> {
         controller: _controller,
         trailing: [
           TextButton.icon(
-            onPressed: () async {
-              await _loadLink(_controller.text);
+            onPressed: () {
+              _linkContarctDID(_controller.text);
             },
             label: Text('Link contract'),
             icon: const Icon(Icons.search_outlined),
           )
         ],
-        onSubmitted: (did) async {
-          await _loadLink(did);
+        onSubmitted: (did) {
+          _linkContarctDID(did);
         },
         hintText: 'Enter contract DID here',
       ),

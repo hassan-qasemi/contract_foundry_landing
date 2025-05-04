@@ -15,24 +15,20 @@ class FAQForm extends StatelessWidget {
     return LayoutBuilder(
       builder: (ctx, cns) {
         return SizedBox(
-            height: cns.maxHeight,
-            width: cns.maxWidth,
-            child: Stack(
-              children: [
-                GlassmorphismBackground(isDarkMode: true),
-                InteractiveViewer(
-                  scaleEnabled: false,
-                  child: Markdown(
-                    styleSheetTheme: MarkdownStyleSheetBaseTheme.material,
-                    data: FaqHandler.state?.content ?? '',
-                    controller: _controller,
-                    onTapLink: (text, href, title) {
-                      launchUrlString(href!);
-                    },
-                  ),
-                ),
-              ],
-            ));
+          height: cns.maxHeight,
+          width: cns.maxWidth,
+          child: InteractiveViewer(
+            scaleEnabled: false,
+            child: Markdown(
+              styleSheetTheme: MarkdownStyleSheetBaseTheme.material,
+              data: FaqHandler.state?.content ?? '',
+              controller: _controller,
+              onTapLink: (text, href, title) {
+                launchUrlString(href!);
+              },
+            ),
+          ),
+        );
       },
     );
   }
