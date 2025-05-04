@@ -30,11 +30,11 @@ class LandingPageMobile extends StatelessWidget {
         ),
         actions: [
           ContactMeButton(),
-          TextButton(
-              onPressed: () {
-                context.goNamed('faq');
-              },
-              child: Text('FAQ'))
+          // TextButton(
+          //     onPressed: () {
+          //       context.goNamed('faq');
+          //     },
+          //     child: Text('FAQ'))
         ],
       ),
       body: Stack(
