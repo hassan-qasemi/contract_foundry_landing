@@ -82,8 +82,8 @@ class LandingPageMobile extends StatelessWidget {
                                   fontWeight: FontWeight.bold))
                         ],
                       )),
-                  SizedBox(height: 20),
-                  ContractLinkerSearchBar(),
+                  // SizedBox(height: 20),
+                  // ContractLinkerSearchBar(),
                   const Expanded(child: SizedBox()),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
