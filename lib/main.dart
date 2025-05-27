@@ -31,6 +31,7 @@ class LandingPage extends StatelessWidget {
         colorScheme: MaterialTheme.darkScheme(),
       ),
       routerConfig: router,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
