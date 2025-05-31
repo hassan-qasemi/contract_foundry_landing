@@ -51,7 +51,7 @@ class LandingPageMobile extends StatelessWidget {
                   Wrap(
                     children: [
                       Text(
-                        'Decentralized Business Interaction',
+                        'Trustless Digital Interaction',
                         textAlign: TextAlign.center,
                         style: context.displayLarge!.copyWith(
                             fontWeight: FontWeight.bold, color: Colors.white),
