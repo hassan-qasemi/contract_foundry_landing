@@ -57,7 +57,7 @@ class _HeadPage extends StatelessWidget {
           Wrap(
             children: [
               Text(
-                'Trustless Digital Interaction',
+                'Decentralized Trustless Interactions',
                 textAlign: TextAlign.center,
                 style: context.displayLarge!
                     .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
