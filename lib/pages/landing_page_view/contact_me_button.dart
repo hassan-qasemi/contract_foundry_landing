@@ -108,9 +108,7 @@ Mission
 
 - Ensure user sovereignty over identity, data, and digital assets.
 
-Contact Us
-
-FOR FURTHER INQUIRIES
+Contact Us For Further Inquiries
 
 Email: [contractfoundry@gmail.com](contractfoundry@gmail.com)      
  ''';

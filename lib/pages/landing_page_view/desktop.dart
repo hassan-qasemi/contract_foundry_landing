@@ -97,6 +97,19 @@ class _HeadPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 const Expanded(child: SizedBox()),
+                FilledButton.tonal(
+                    onPressed: () async {
+                      await launchUrlString(Links.waitlistLink);
+                    },
+                    child: Text('Join Wait list')),
+                const Expanded(child: SizedBox()),
+              ],
+            ),
+            const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                const Expanded(child: SizedBox()),
                 TextButton(
                     onPressed: () async {
                       await launchUrlString(Links.whitePaperLink);
@@ -115,19 +128,7 @@ class _HeadPage extends StatelessWidget {
                 const Expanded(child: SizedBox()),
               ],
             ),
-            const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                const Expanded(child: SizedBox()),
-                FilledButton.tonal(
-                    onPressed: () async {
-                      await launchUrlString(Links.waitlistLink);
-                    },
-                    child: Text('Join Wait list')),
-                const Expanded(child: SizedBox()),
-              ],
-            ),
+
             const Expanded(child: SizedBox(), flex: 2),
             const CopyrightWidget(),
             const SizedBox(height: 20),
