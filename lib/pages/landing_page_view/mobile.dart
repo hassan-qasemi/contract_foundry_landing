@@ -109,9 +109,14 @@ class _HeadPage extends StatelessWidget {
                     await launchUrlString(Links.documentsLink);
                   },
                   child: Text('Documents')),
-              SizedBox(
-                width: 4,
-              ),
+              const Expanded(child: SizedBox()),
+            ],
+          ),
+          const SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              const Expanded(child: SizedBox()),
               FilledButton.tonal(
                   onPressed: () async {
                     await launchUrlString(Links.waitlistLink);
