@@ -7,6 +7,10 @@ class Links {
   static final String blueskyLink =
       'https://bsky.app/profile/contractfoundry.bsky.social';
   static final String emailLink = 'contractfoundry@outlook.com';
-  static final String mediumLink = 'https://medium.com/@contractfoundry/';
+  // static final String mediumLink = 'https://medium.com/@contractfoundry/';
+  static final String whitePaperLink =
+      'https://drive.google.com/file/d/1xrP4LZOZe8Lelz95WI9K98HKAqS_8Qwb/view?usp=sharing';
+  static final String documentsLink =
+      'https://hassan-qasemi.github.io/contract_foundry_docs/';
   static final String appDownloadRepoAddress = '';
 }

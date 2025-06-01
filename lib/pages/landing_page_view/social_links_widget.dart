@@ -38,14 +38,14 @@ class SocialLinksWidget extends StatelessWidget {
               Carbon.logo_twitter,
               color: Colors.white,
             )),
-        IconButton.outlined(
-            onPressed: () async {
-              await launchUrlString(Links.mediumLink);
-            },
-            icon: Iconify(
-              Carbon.logo_medium,
-              color: Colors.white,
-            )),
+        // IconButton.outlined(
+        //     onPressed: () async {
+        //       await launchUrlString(Links.mediumLink);
+        //     },
+        //     icon: Iconify(
+        //       Carbon.logo_medium,
+        //       color: Colors.white,
+        //     )),
         const Expanded(child: SizedBox()),
       ],
     );
