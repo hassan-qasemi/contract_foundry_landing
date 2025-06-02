@@ -125,7 +125,22 @@ class _HeadPage extends StatelessWidget {
               const Expanded(child: SizedBox()),
             ],
           ),
-
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              const Expanded(child: SizedBox()),
+              TextButton(
+                  onPressed: () async {
+                    await launchUrlString(Links.serviceprofLink);
+                  },
+                  child: Text(
+                    'Service portfolio & pricing',
+                    style: context.bodyMedium!.copyWith(color: Colors.white),
+                  )),
+              const Expanded(child: SizedBox()),
+            ],
+          ),
           const Expanded(
             flex: 2,
             child: SizedBox(),
