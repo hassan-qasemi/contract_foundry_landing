@@ -94,7 +94,7 @@ class _AboutPageState extends State<AboutPage> {
 const _aboutText = '''
 About
 
-Contract Foundry is a decentralized Web3 platform that empowers individuals, agencies, and enterprises to manage digital identities, sign legally binding contracts, and issue verifiable credentials without reliance on third parties. users interact directly with smart contracts, keeping full control over their data, identity, and digital assets.
+Contract Foundry is a permissionless decentralized Web3 platform that empowers individuals, agencies, and enterprises to manage digital identities, sign legally binding contracts, and issue verifiable credentials without reliance on third parties. users interact directly with smart contracts, keeping full control over their data, identity, and digital assets.
 
 Vision
 
