@@ -125,7 +125,7 @@ class _HeadPage extends StatelessWidget {
               const Expanded(child: SizedBox()),
             ],
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
