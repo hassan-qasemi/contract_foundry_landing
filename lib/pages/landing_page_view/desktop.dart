@@ -70,16 +70,17 @@ class _HeadPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             const Expanded(child: SizedBox()),
-                            Wrap(
+                            ListTile(
+                                title: Wrap(
                               children: [
                                 Text(
                                   'Contract Foundry',
                                   style: context.displayMedium!.copyWith(
                                       color: Colors.white70,
                                       fontWeight: FontWeight.bold),
-                                )
+                                ),
                               ],
-                            ),
+                            )),
                             const Expanded(child: SizedBox()),
                             Wrap(
                               children: [
@@ -109,7 +110,7 @@ class _HeadPage extends StatelessWidget {
                                       ],
                                     )),
                                 ListTile(
-                                  trailing: FilledButton.tonal(
+                                  leading: FilledButton.tonal(
                                       onPressed: () async {
                                         await launchUrlString(
                                             Links.waitlistLink);
