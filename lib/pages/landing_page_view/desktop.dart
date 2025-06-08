@@ -2,6 +2,7 @@ import 'package:contract_foundry_landing_page/config.dart';
 import 'package:contract_foundry_landing_page/theme/text_theme_extensions.dart';
 import 'package:contract_foundry_landing_page/theme/theme_color_extension.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'background.dart';
 import 'about_page.dart';
@@ -19,6 +20,13 @@ class LandingPageDesktop extends StatelessWidget {
         surfaceTintColor: Colors.transparent,
         elevation: 0,
         actions: [
+          TextButton.icon(
+            onPressed: () {
+              context.goNamed('contract_loader_page');
+            },
+            label: Text('Load contract'),
+            icon: const Icon(Icons.search),
+          ),
           TextButton(
               onPressed: () async {
                 await launchUrlString(Links.serviceprofLink);

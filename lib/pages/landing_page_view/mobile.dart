@@ -5,6 +5,7 @@ import 'package:contract_foundry_landing_page/pages/landing_page_view/social_lin
 import 'package:contract_foundry_landing_page/theme/text_theme_extensions.dart';
 import 'package:contract_foundry_landing_page/theme/theme_color_extension.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import 'copyright_widget.dart';
@@ -49,6 +50,13 @@ class LandingPageMobile extends StatelessWidget {
                               title: Text('Get White paper'),
                               onTap: () async {
                                 await launchUrlString(Links.whitePaperLink);
+                              },
+                            ),
+                            ListTile(
+                              leading: const Icon(Icons.search),
+                              title: Text('Load Contract'),
+                              onTap: () {
+                                context.goNamed('contract_loader_page');
                               },
                             ),
                           ],

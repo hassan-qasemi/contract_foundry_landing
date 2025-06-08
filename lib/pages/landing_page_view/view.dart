@@ -1,7 +1,6 @@
 import 'package:contract_foundry_landing_page/pages/landing_page_view/desktop.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/mobile.dart';
 import 'package:contract_foundry_landing_page/theme/color_scheme.g.dart';
-import 'package:contract_foundry_landing_page/theme/text_theme_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
