@@ -19,7 +19,7 @@ class LandingPageView extends StatelessWidget {
                 colorScheme: MaterialTheme.darkScheme(),
                 textTheme: GoogleFonts.montserratTextTheme()),
             child: LayoutBuilder(builder: (ctx, cns) {
-              if (cns.maxWidth > 600) {
+              if (cns.maxWidth > 1100) {
                 return LandingPageDesktop();
               }
 
