@@ -4,6 +4,7 @@ import 'package:contract_foundry_landing_page/theme/theme_color_extension.dart';
 import 'package:contract_foundry_landing_page/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+import 'dart:html' as html;
 
 class ContarctPageView extends StatelessWidget {
   final String contractDID;
@@ -12,12 +13,16 @@ class ContarctPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: Future(() async {
+        future: Future(() {
           try {
             checkDID(contractDID);
 
-            launchUrlString(
-                'https://contractfoundry.web.app/contract/$contractDID');
+            // launchUrlString(
+            //     'https://contractfoundry.web.app/contract/$contractDID');
+
+            final appLink =
+                'https://contractfoundry.web.app/contract/$contractDID';
+            html.window.location.href = appLink;
           } catch (err) {
             showDialog(
                 context: context,
