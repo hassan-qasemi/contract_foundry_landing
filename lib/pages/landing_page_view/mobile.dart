@@ -53,8 +53,8 @@ class LandingPageMobile extends StatelessWidget {
                               },
                             ),
                             ListTile(
-                              leading: const Icon(Icons.search),
-                              title: Text('Load Contract'),
+                              leading: const Icon(Icons.launch_outlined),
+                              title: Text('Link Contract'),
                               onTap: () {
                                 context.goNamed('contract_loader_page');
                               },

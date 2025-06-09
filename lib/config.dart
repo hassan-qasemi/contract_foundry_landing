@@ -7,7 +7,7 @@ class Links {
   static final String blueskyLink =
       'https://bsky.app/profile/contractfoundry.bsky.social';
   static final String emailLink = 'contractfoundry@outlook.com';
-  // static final String mediumLink = 'https://medium.com/@contractfoundry/';
+  static final String mediumLink = 'https://medium.com/@contractfoundry/';
   static final String whitePaperLink =
       'https://drive.google.com/file/d/1Oozol-l8gga0Zw0P7hgfutd1UzF8Snnz/view?usp=sharing';
   static final String serviceprofLink =

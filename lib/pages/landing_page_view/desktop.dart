@@ -24,8 +24,8 @@ class LandingPageDesktop extends StatelessWidget {
             onPressed: () {
               context.goNamed('contract_loader_page');
             },
-            label: Text('Load contract'),
-            icon: const Icon(Icons.search),
+            label: Text('Link contract'),
+            icon: const Icon(Icons.launch_outlined),
           ),
           TextButton(
               onPressed: () async {

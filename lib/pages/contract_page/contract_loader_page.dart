@@ -21,7 +21,7 @@ class _ContractLoaderPage extends State<ContractLoaderPage> {
         forceMaterialTransparency: true,
         elevation: 0,
         title: Text(
-          'Load contract',
+          'Link contract',
         ),
         leading: IconButton(
             onPressed: () {
