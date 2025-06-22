@@ -14,5 +14,6 @@ class Links {
       'https://drive.google.com/file/d/1HFZPQR83cffdy0ONu8vpDebWVakBasCb/view?usp=sharing';
   static final String documentsLink =
       'https://hassan-qasemi.github.io/contract_foundry_docs/';
+  static final String telegramChannelLink = 'https://t.me/contractfoundry';
   static final String appDownloadRepoAddress = '';
 }

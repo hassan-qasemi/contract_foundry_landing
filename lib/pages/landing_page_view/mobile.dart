@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
+import '../service_intro_pages/mobile.dart';
 import 'copyright_widget.dart';
 
 class LandingPageMobile extends StatelessWidget {
@@ -96,6 +97,45 @@ class LandingPageMobile extends StatelessWidget {
                 ])),
               ),
               _HeadPage(),
+              ServiceIntroCardMobileView(
+                asset: Placeholder(),
+                h: MediaQuery.of(context).size.height,
+                w: MediaQuery.of(context).size.width,
+                title: 'Document Certification',
+                description:
+                    'On-Chain Document Cerification, automated verification and authentication, compliant signature,on-chain signature verification, immutable signature, immutable audit trails, multi signature support, expirable and revocable.',
+              ),
+              ServiceIntroCardMobileView(
+                asset: Placeholder(),
+                h: MediaQuery.of(context).size.height,
+                w: MediaQuery.of(context).size.width,
+                title: 'P2P Payment',
+                description:
+                    'P2P trustless payment, fund safety, cancellable and expirable, payment rollback support, leaving contract with both side agreement.',
+              ),
+              ServiceIntroCardMobileView(
+                asset: Placeholder(),
+                h: MediaQuery.of(context).size.height,
+                w: MediaQuery.of(context).size.width,
+                title: 'Asset Monetization',
+                description:
+                    'Global audit for creators and authors, blockchain-native paywall for selling digitall assets.',
+              ),
+              ServiceIntroCardMobileView(
+                asset: Placeholder(),
+                h: MediaQuery.of(context).size.height,
+                w: MediaQuery.of(context).size.width,
+                title: 'Decentralized Identity',
+                description:
+                    'Self-Sovereign Identity, ERC1056, W3C DID support, multi-controller, Decentralized PublicKey Infrastructure.',
+              ),
+              ServiceIntroCardMobileView(
+                  asset: Placeholder(),
+                  h: MediaQuery.of(context).size.height,
+                  w: MediaQuery.of(context).size.width,
+                  title: 'Verifiable Credentials',
+                  description:
+                      'Wallet-First user centric credentials, based on W3C Verifiable Credentials v2.0, selective disclosure, standalone and registered credential support.'),
               AboutPage()
             ],
           )),
