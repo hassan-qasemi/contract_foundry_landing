@@ -5,6 +5,7 @@ class DesktopServiceTile extends StatelessWidget {
   final double w, h;
   final String description, title;
   final Widget asset;
+  final bool rtl;
 
   const DesktopServiceTile(
       {super.key,
@@ -12,6 +13,7 @@ class DesktopServiceTile extends StatelessWidget {
       required this.h,
       required this.description,
       required this.title,
+      this.rtl = false,
       required this.asset});
 
   @override
@@ -21,48 +23,93 @@ class DesktopServiceTile extends StatelessWidget {
       width: w,
       child: Row(
         children: [
-          Expanded(
-              flex: 2,
-              child: SizedBox(
+          if (rtl) ...[
+            Expanded(
+                flex: 3,
                 child: Padding(
                     padding: EdgeInsetsGeometry.all(7),
-                    child: Column(children: [
-                      const Expanded(child: SizedBox()),
-                      ListTile(
-                        title: Wrap(
-                          children: [
-                            Text(
-                              title,
-                              style: context.headlineLarge!.copyWith(
-                                  color: Colors.white70,
-                                  fontWeight: FontWeight.bold),
-                              textAlign: TextAlign.center,
-                            )
-                          ],
+                    child: SizedBox(
+                      child: asset,
+                    ))),
+            Expanded(
+                flex: 2,
+                child: SizedBox(
+                  child: Padding(
+                      padding: EdgeInsetsGeometry.all(7),
+                      child: Column(children: [
+                        const Expanded(child: SizedBox()),
+                        ListTile(
+                          title: Wrap(
+                            children: [
+                              Text(
+                                title,
+                                style: context.headlineLarge!.copyWith(
+                                    color: Colors.white70,
+                                    fontWeight: FontWeight.bold),
+                                textDirection: TextDirection.rtl,
+                              )
+                            ],
+                          ),
                         ),
-                      ),
-                      ListTile(
-                        title: Wrap(
-                          children: [
-                            Text(
-                              description,
-                              style: context.bodyLarge!.copyWith(
-                                  color: Colors.white70,
-                                  fontWeight: FontWeight.bold),
-                            )
-                          ],
+                        ListTile(
+                          title: Wrap(
+                            children: [
+                              Text(
+                                description,
+                                style: context.bodyLarge!.copyWith(
+                                    color: Colors.white70,
+                                    fontWeight: FontWeight.bold),
+                                textDirection: TextDirection.rtl,
+                              )
+                            ],
+                          ),
                         ),
-                      ),
-                      const Expanded(child: SizedBox()),
-                    ])),
-              )),
-          Expanded(
-              flex: 3,
-              child: Padding(
-                  padding: EdgeInsetsGeometry.all(7),
-                  child: SizedBox(
-                    child: asset,
-                  ))),
+                        const Expanded(child: SizedBox()),
+                      ])),
+                )),
+          ] else ...[
+            Expanded(
+                flex: 2,
+                child: SizedBox(
+                  child: Padding(
+                      padding: EdgeInsetsGeometry.all(7),
+                      child: Column(children: [
+                        const Expanded(child: SizedBox()),
+                        ListTile(
+                          title: Wrap(
+                            children: [
+                              Text(
+                                title,
+                                style: context.headlineLarge!.copyWith(
+                                    color: Colors.white70,
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                        ),
+                        ListTile(
+                          title: Wrap(
+                            children: [
+                              Text(
+                                description,
+                                style: context.bodyLarge!.copyWith(
+                                    color: Colors.white70,
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                        ),
+                        const Expanded(child: SizedBox()),
+                      ])),
+                )),
+            Expanded(
+                flex: 3,
+                child: Padding(
+                    padding: EdgeInsetsGeometry.all(7),
+                    child: SizedBox(
+                      child: asset,
+                    ))),
+          ]
         ],
       ),
     );

@@ -60,6 +60,7 @@ class LandingPageDesktop extends StatelessWidget {
                 asset: Placeholder(),
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
+                rtl: true,
                 title: 'Document Certification',
                 description:
                     'On-Chain Document Cerification, multi-chain automated verification and authentication, compliant signature, on-chain signature verification, immutable signature, immutable audit trails, multi signature support, expirable and revocable.',
@@ -76,6 +77,7 @@ class LandingPageDesktop extends StatelessWidget {
                 asset: Placeholder(),
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
+                rtl: true,
                 title: 'Asset Monetization',
                 description:
                     'Global audit for creators and authors, blockchain-native paywall for selling digitall assets.',
@@ -92,6 +94,7 @@ class LandingPageDesktop extends StatelessWidget {
                   asset: Placeholder(),
                   h: MediaQuery.of(context).size.height,
                   w: MediaQuery.of(context).size.width,
+                  rtl: true,
                   title: 'Verifiable Credentials',
                   description:
                       'Wallet-First user centric credentials, based on W3C Verifiable Credentials v2.0, selective disclosure, standalone and registered credential support.'),

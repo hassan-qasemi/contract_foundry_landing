@@ -58,7 +58,8 @@ Widget _buildInteractiveMDView(
             ),
             listBullet: TextStyle(
               color: Colors.white, // Color for list bullets
-            )),
+            ),
+            textAlign: WrapAlignment.spaceEvenly),
         data: md,
         controller: controller,
         onTapLink: (text, href, title) {
