@@ -30,6 +30,7 @@ class ServiceIntroCardMobileView extends StatelessWidget {
                   ))),
           ListTile(
             title: Wrap(
+              alignment: WrapAlignment.center,
               children: [
                 Text(
                   title,

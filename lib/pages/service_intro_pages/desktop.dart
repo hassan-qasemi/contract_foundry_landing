@@ -40,6 +40,7 @@ class DesktopServiceTile extends StatelessWidget {
                         const Expanded(child: SizedBox()),
                         ListTile(
                           title: Wrap(
+                            alignment: WrapAlignment.end,
                             children: [
                               Text(
                                 title,
