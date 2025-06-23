@@ -10,7 +10,7 @@ class Links {
   static final String emailLink = 'contractfoundry@outlook.com';
   static final String mediumLink = 'https://medium.com/@contractfoundry/';
   static final String whitePaperLink =
-      'https://drive.google.com/file/d/1Oozol-l8gga0Zw0P7hgfutd1UzF8Snnz/view?usp=sharing';
+      'https://drive.google.com/file/d/1LKjK0iQBDYr7FdYNCZsFKreBSUDqT-xc/view?usp=sharing';
   static final String serviceprofLink =
       'https://drive.google.com/file/d/1HFZPQR83cffdy0ONu8vpDebWVakBasCb/view?usp=sharing';
   static final String documentsLink =
