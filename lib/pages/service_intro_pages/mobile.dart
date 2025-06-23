@@ -26,6 +26,7 @@ class ServiceIntroCardMobileView extends StatelessWidget {
               child: Padding(
                   padding: EdgeInsetsGeometry.all(4),
                   child: SizedBox(
+                    width: 350,
                     child: asset,
                   ))),
           ListTile(
