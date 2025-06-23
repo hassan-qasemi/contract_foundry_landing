@@ -63,7 +63,7 @@ class LandingPageDesktop extends StatelessWidget {
                 rtl: true,
                 title: 'Document Certification',
                 description:
-                    'On-Chain Document Cerification, multi-chain automated verification and authentication, compliant signature, on-chain signature verification, immutable signature, immutable audit trails, multi signature support, expirable and revocable.',
+                    'On-Chain Document Cerification, multi-chain automated verification and authentication, compliant signature, on-chain signature verification, immutable signature, immutable audit trails, multi signature support, expirable and revocable',
               ),
               DesktopServiceTile(
                 asset: Placeholder(),
@@ -71,7 +71,7 @@ class LandingPageDesktop extends StatelessWidget {
                 w: MediaQuery.of(context).size.width,
                 title: 'P2P Payment',
                 description:
-                    'P2P trustless payment, fund safety, cancellable and expirable, payment rollback support, leaving contract with both side agreement.',
+                    'P2P trustless payment, fund safety, cancellable and expirable, payment rollback support, leaving contract with both side agreement',
               ),
               DesktopServiceTile(
                 asset: Placeholder(),
@@ -80,7 +80,7 @@ class LandingPageDesktop extends StatelessWidget {
                 rtl: true,
                 title: 'Asset Monetization',
                 description:
-                    'Global audit for creators and authors, blockchain-native paywall for selling digitall assets.',
+                    'Global audit for creators and authors, blockchain-native paywall for selling digitall assets',
               ),
               DesktopServiceTile(
                 asset: Placeholder(),
@@ -88,7 +88,7 @@ class LandingPageDesktop extends StatelessWidget {
                 w: MediaQuery.of(context).size.width,
                 title: 'Decentralized Identity',
                 description:
-                    'Self-Sovereign Identity, ERC1056, W3C DID support, multi-controller, Decentralized PublicKey Infrastructure.',
+                    'Self-Sovereign Identity, ERC1056, W3C DID support, multi-controller, Decentralized PublicKey Infrastructure',
               ),
               DesktopServiceTile(
                   asset: Placeholder(),
@@ -97,7 +97,7 @@ class LandingPageDesktop extends StatelessWidget {
                   rtl: true,
                   title: 'Verifiable Credentials',
                   description:
-                      'Wallet-First user centric credentials, based on W3C Verifiable Credentials v2.0, selective disclosure, standalone and registered credential support.'),
+                      'Wallet-First user centric credentials, based on W3C Verifiable Credentials v2.0, selective disclosure, standalone and registered credential support'),
               AboutPage()
             ],
           )
