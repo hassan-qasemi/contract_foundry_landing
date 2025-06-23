@@ -162,7 +162,7 @@ class _HeadPage extends StatelessWidget {
         children: [
           const Expanded(child: SizedBox()),
           Padding(
-              padding: EdgeInsets.symmetric(horizontal: 50),
+              padding: EdgeInsets.symmetric(horizontal: 30),
               child: Wrap(
                 children: [
                   Text(
