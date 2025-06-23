@@ -1,3 +1,4 @@
+import 'package:contract_foundry_landing_page/assets.dart';
 import 'package:contract_foundry_landing_page/config.dart';
 import 'package:contract_foundry_landing_page/theme/text_theme_extensions.dart';
 import 'package:contract_foundry_landing_page/theme/theme_color_extension.dart';
@@ -57,7 +58,7 @@ class LandingPageDesktop extends StatelessWidget {
             children: [
               _HeadPage(),
               DesktopServiceTile(
-                asset: Placeholder(),
+                asset: Assets.docAsset,
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
                 rtl: true,
@@ -66,7 +67,7 @@ class LandingPageDesktop extends StatelessWidget {
                     'On-Chain Document Cerification, multi-chain automated verification and authentication, compliant signature, on-chain signature verification, immutable signature, immutable audit trails, multi signature support, expirable and revocable',
               ),
               DesktopServiceTile(
-                asset: Placeholder(),
+                asset: Assets.paperAsset,
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
                 title: 'P2P Payment',
@@ -74,7 +75,7 @@ class LandingPageDesktop extends StatelessWidget {
                     'P2P trustless payment, fund safety, cancellable and expirable, payment rollback support, leaving contract with both side agreement',
               ),
               DesktopServiceTile(
-                asset: Placeholder(),
+                asset: Assets.apwAsset,
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
                 rtl: true,
@@ -83,7 +84,7 @@ class LandingPageDesktop extends StatelessWidget {
                     'Global audit for creators and authors, blockchain-native paywall for selling digitall assets',
               ),
               DesktopServiceTile(
-                asset: Placeholder(),
+                asset: Assets.idAsset,
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
                 title: 'Decentralized Identity',
@@ -91,7 +92,7 @@ class LandingPageDesktop extends StatelessWidget {
                     'Self-Sovereign Identity, ERC1056, W3C DID support, multi-controller, Decentralized PublicKey Infrastructure',
               ),
               DesktopServiceTile(
-                  asset: Placeholder(),
+                  asset: Assets.credAsset,
                   h: MediaQuery.of(context).size.height,
                   w: MediaQuery.of(context).size.width,
                   rtl: true,

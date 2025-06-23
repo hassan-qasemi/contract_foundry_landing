@@ -1,3 +1,4 @@
+import 'package:contract_foundry_landing_page/assets.dart';
 import 'package:contract_foundry_landing_page/config.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/background.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/about_page.dart';
@@ -98,7 +99,7 @@ class LandingPageMobile extends StatelessWidget {
               ),
               _HeadPage(),
               ServiceIntroCardMobileView(
-                asset: Placeholder(),
+                asset: Assets.docAsset,
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
                 title: 'Document Certification',
@@ -106,7 +107,7 @@ class LandingPageMobile extends StatelessWidget {
                     'On-Chain Document Cerification, automated verification and authentication, compliant signature,on-chain signature verification, immutable signature, immutable audit trails, multi signature support, expirable and revocable.',
               ),
               ServiceIntroCardMobileView(
-                asset: Placeholder(),
+                asset: Assets.paperAsset,
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
                 title: 'P2P Payment',
@@ -114,7 +115,7 @@ class LandingPageMobile extends StatelessWidget {
                     'P2P trustless payment, fund safety, cancellable and expirable, payment rollback support, leaving contract with both side agreement.',
               ),
               ServiceIntroCardMobileView(
-                asset: Placeholder(),
+                asset: Assets.apwAsset,
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
                 title: 'Asset Monetization',
@@ -122,7 +123,7 @@ class LandingPageMobile extends StatelessWidget {
                     'Global audit for creators and authors, blockchain-native paywall for selling digitall assets.',
               ),
               ServiceIntroCardMobileView(
-                asset: Placeholder(),
+                asset: Assets.idAsset,
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
                 title: 'Decentralized Identity',
@@ -130,7 +131,7 @@ class LandingPageMobile extends StatelessWidget {
                     'Self-Sovereign Identity, ERC1056, W3C DID support, multi-controller, Decentralized PublicKey Infrastructure.',
               ),
               ServiceIntroCardMobileView(
-                  asset: Placeholder(),
+                  asset: Assets.credAsset,
                   h: MediaQuery.of(context).size.height,
                   w: MediaQuery.of(context).size.width,
                   title: 'Verifiable Credentials',
