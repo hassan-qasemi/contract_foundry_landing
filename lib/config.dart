@@ -1,6 +1,7 @@
 class Links {
   static final String waitlistLink =
-      'https://contract-foundry-beta.my.canva.site/';
+      // 'https://contract-foundry-beta.my.canva.site/';
+      'https://docs.google.com/forms/d/e/1FAIpQLSdkhEUEjL8YcqKpeRPTJwY8k14su-fIq-OddrEvEGsAIsFf4w/viewform?usp=header';
   static final String xLink = 'https://twitter.com/contractfoundry';
   static final String linkedinLink =
       'https://www.linkedin.com/company/contractfoundry';
