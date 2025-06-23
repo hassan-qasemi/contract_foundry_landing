@@ -139,14 +139,15 @@ class _HeadPage extends StatelessWidget {
                             Wrap(
                               children: [
                                 Padding(
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 20),
+                                    padding: EdgeInsets.only(
+                                        left: 20, right: 20, bottom: 40),
                                     child: Wrap(
                                       children: [
                                         Text(
                                           _description,
                                           style: context.bodyLarge!.copyWith(
                                               color: context.primaryColor),
+                                          textAlign: TextAlign.justify,
                                         )
                                       ],
                                     )),
@@ -191,7 +192,7 @@ class _HeadPage extends StatelessWidget {
                         Wrap(
                           children: [
                             Text(
-                              'Decentralized\nTrustless\nInteractions',
+                              'Decentralized\nTrustless\nInfrastructure',
                               style: context.displayLarge!.copyWith(
                                   color: Colors.white70,
                                   fontWeight: FontWeight.bold,
@@ -207,18 +208,21 @@ class _HeadPage extends StatelessWidget {
                   ))
             ]));
   }
+
+  final _description =
+      'Contract Foundry is a permissionless decentralized platform that provides self-sovereign identity, verifiable credentials, and trustless smart contracts as infrastructure.\n\nWe empower users to manage their data, verify contracts and credentials securely, privately, and without intermediaries. Built on blockchain and Web3 principles, our mission is to redefine trust through automation, transparency, and control.';
+
+//   final _description = '''
+// Contract Foundry is a permissionless
+// decentralized platform that provides self-
+// sovereign identity, verifiable credentials, and
+// trustless smart contracts as infrastructure.
+
+// We empower users to manage their data,
+// verify contracts and credentials securely,
+// privately, and without intermediaries. Built on
+// blockchain and Web3 principles, our mission
+// is to redefine trust through automation,
+// transparency, and control.
+// ''';
 }
-
-const _description = '''
-Contract Foundry is a permissionless
-decentralized platform that provides self-
-sovereign identity, verifiable credentials, and
-trustless smart contracts as infrastructure.
-
-We empower users to manage their data,
-verify contracts and credentials securely,
-privately, and without intermediaries. Built on
-blockchain and Web3 principles, our mission
-is to redefine trust through automation,
-transparency, and control.
-''';

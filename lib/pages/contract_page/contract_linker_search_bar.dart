@@ -1,6 +1,6 @@
 import 'package:contract_foundry_landing_page/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'dart:html' as html;
 
 class ContractLinkerSearchBar extends StatefulWidget {
   const ContractLinkerSearchBar({super.key});
@@ -23,7 +23,9 @@ class _ContractLinkerSearchBarState extends State<ContractLinkerSearchBar> {
     try {
       checkDID(did);
 
-      context.go('/contract/$did');
+      // context.go('/contract/$did');
+      final appLink = 'https://contractfoundry.web.app/contract/$did';
+      html.window.location.href = appLink;
     } catch (err) {
       showDialog(
           context: context,

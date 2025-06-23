@@ -161,12 +161,15 @@ class _HeadPage extends StatelessWidget {
         children: [
           const Expanded(child: SizedBox()),
           Padding(
-              padding: EdgeInsets.symmetric(horizontal: 2),
+              padding: EdgeInsets.symmetric(horizontal: 50),
               child: Wrap(
                 children: [
-                  Text(_description,
-                      style: context.bodyLarge!
-                          .copyWith(color: context.primaryColor))
+                  Text(
+                    _description,
+                    style: context.bodyLarge!
+                        .copyWith(color: context.primaryColor),
+                    textAlign: TextAlign.justify,
+                  ),
                 ],
               )),
           SizedBox(height: 20),
@@ -207,17 +210,20 @@ class _HeadPage extends StatelessWidget {
     );
   }
 
-  final _description = '''
-Contract Foundry is a permissionless
-decentralized platform that provides self-
-sovereign identity, verifiable credentials, and
-trustless smart contracts as infrastructure.
+  final _description =
+      'Contract Foundry is a permissionless decentralized platform that provides self-sovereign identity, verifiable credentials, and trustless smart contracts as infrastructure.\n\nWe empower users to manage their data, verify contracts and credentials securely, privately, and without intermediaries. Built on blockchain and Web3 principles, our mission is to redefine trust through automation, transparency, and control.';
 
-We empower users to manage their data,
-verify contracts and credentials securely,
-privately, and without intermediaries. Built on
-blockchain and Web3 principles, our mission
-is to redefine trust through automation,
-transparency, and control.
-''';
+//   final _description = '''
+// Contract Foundry is a permissionless
+// decentralized platform that provides self-
+// sovereign identity, verifiable credentials, and
+// trustless smart contracts as infrastructure.
+
+// We empower users to manage their data,
+// verify contracts and credentials securely,
+// privately, and without intermediaries. Built on
+// blockchain and Web3 principles, our mission
+// is to redefine trust through automation,
+// transparency, and control.
+// ''';
 }
