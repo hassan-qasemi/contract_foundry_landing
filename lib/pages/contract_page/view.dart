@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'dart:html' as html;
 
-class ContarctPageView extends StatelessWidget {
+class ContractPageView extends StatelessWidget {
   final String contractDID;
-  const ContarctPageView({super.key, required this.contractDID});
+  const ContractPageView({super.key, required this.contractDID});
 
   @override
   Widget build(BuildContext context) {

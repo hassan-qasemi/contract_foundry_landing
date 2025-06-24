@@ -17,12 +17,12 @@ final router = GoRouter(initialLocation: "/", routes: [
   //     builder: (context, state) {
   //       return FAQPageView();
   //     }),
-  // GoRoute(
-  //     path: '/contract/:did',
-  //     name: 'contract',
-  //     builder: (context, state) => ContarctPageView(
-  //           contractDID: state.pathParameters['did'] ?? '',
-  //         )),
+  GoRoute(
+      path: '/contract/:did',
+      name: 'contract',
+      builder: (context, state) => ContractPageView(
+            contractDID: state.pathParameters['did'] ?? '',
+          )),
   GoRoute(
       path: '/contract',
       name: 'contract_loader_page',
