@@ -157,21 +157,25 @@ class _HeadPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: Wrap(
+                                      // alignment: WrapAlignment.end,
                                       children: [
-                                        Text('Launching Soon',
+                                        Expanded(child: SizedBox()),
+                                        Text(
+                                            'Contract Foundry Wallet beta is available to download for testers',
                                             textAlign: TextAlign.center,
                                             style: context.bodyLarge!.copyWith(
                                                 color: Colors.white,
-                                                fontWeight: FontWeight.bold))
+                                                fontWeight: FontWeight.bold)),
+                                        Expanded(child: SizedBox()),
                                       ],
                                     )),
                                 ListTile(
                                   leading: FilledButton.tonal(
                                       onPressed: () async {
                                         await launchUrlString(
-                                            Links.waitlistLink);
+                                            Links.requestBetaLink);
                                       },
-                                      child: Text('Join Wait list')),
+                                      child: Text('Become a Beta Tester')),
                                 ),
                               ],
                             ),

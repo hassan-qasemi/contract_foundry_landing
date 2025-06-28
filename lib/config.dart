@@ -1,7 +1,7 @@
 class Links {
-  static final String waitlistLink =
+  static final String requestBetaLink =
       // 'https://contract-foundry-beta.my.canva.site/';
-      'https://docs.google.com/forms/d/e/1FAIpQLSdkhEUEjL8YcqKpeRPTJwY8k14su-fIq-OddrEvEGsAIsFf4w/viewform?usp=header';
+      'https://docs.google.com/forms/d/e/1FAIpQLSf-eBGvbbgjDuB7NhsZWrP3jQ115juF0GIzYh3PUqz19FIA6g/viewform?usp=header';
   static final String xLink = 'https://twitter.com/contractfoundry';
   static final String linkedinLink =
       'https://www.linkedin.com/company/contractfoundry';
