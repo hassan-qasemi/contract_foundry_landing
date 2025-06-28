@@ -157,16 +157,13 @@ class _HeadPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: Wrap(
-                                      // alignment: WrapAlignment.end,
                                       children: [
-                                        Expanded(child: SizedBox()),
                                         Text(
                                             'Contract Foundry Wallet beta is available to download for testers',
                                             textAlign: TextAlign.center,
                                             style: context.bodyLarge!.copyWith(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.bold)),
-                                        Expanded(child: SizedBox()),
                                       ],
                                     )),
                                 ListTile(
