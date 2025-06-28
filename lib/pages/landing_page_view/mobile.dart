@@ -54,13 +54,13 @@ class LandingPageMobile extends StatelessWidget {
                                 await launchUrlString(Links.whitePaperLink);
                               },
                             ),
-                            ListTile(
-                              leading: const Icon(Icons.launch_outlined),
-                              title: Text('Link Contract'),
-                              onTap: () {
-                                context.goNamed('contract_loader_page');
-                              },
-                            ),
+                            // ListTile(
+                            //   leading: const Icon(Icons.launch_outlined),
+                            //   title: Text('Link Contract'),
+                            //   onTap: () {
+                            //     context.goNamed('contract_loader_page');
+                            //   },
+                            // ),
                           ],
                         ));
               },

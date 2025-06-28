@@ -22,13 +22,13 @@ class LandingPageDesktop extends StatelessWidget {
         surfaceTintColor: Colors.transparent,
         elevation: 0,
         actions: [
-          TextButton.icon(
-            onPressed: () {
-              context.goNamed('contract_loader_page');
-            },
-            label: Text('Link contract'),
-            icon: const Icon(Icons.launch_outlined),
-          ),
+          // TextButton.icon(
+          //   onPressed: () {
+          //     context.goNamed('contract_loader_page');
+          //   },
+          //   label: Text('Link contract'),
+          //   icon: const Icon(Icons.launch_outlined),
+          // ),
           TextButton(
               onPressed: () async {
                 await launchUrlString(Links.serviceprofLink);
