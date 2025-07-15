@@ -179,7 +179,7 @@ class _HeadPage extends StatelessWidget {
               child: Wrap(
                 children: [
                   Text(
-                      'Contract Foundry Wallet beta is available to download for testers',
+                      'The Contract Foundry Wallet beta will be available to users on our early access list',
                       textAlign: TextAlign.center,
                       style: context.bodyLarge!.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold))
@@ -196,7 +196,7 @@ class _HeadPage extends StatelessWidget {
                   onPressed: () async {
                     await launchUrlString(Links.requestBetaLink);
                   },
-                  child: Text('Become a Beta Tester')),
+                  child: Text('Request Early Access')),
               const Expanded(child: SizedBox()),
             ],
           ),
