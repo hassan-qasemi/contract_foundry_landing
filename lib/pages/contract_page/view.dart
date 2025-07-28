@@ -2,6 +2,8 @@ import 'package:contract_foundry_landing_page/config.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/background.dart';
 import 'package:contract_foundry_landing_page/theme/theme_color_extension.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class ContractPageView extends StatelessWidget {
@@ -10,33 +12,6 @@ class ContractPageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return FutureBuilder(
-    //     future: Future(() {
-    //       try {
-    //         checkDID(contractDID);
-
-    //         // launchUrlString(
-    //         //     'https://contractfoundry.web.app/contract/$contractDID');
-
-    //         final appLink =
-    //             'https://contractfoundry.web.app/contract/$contractDID';
-    //         html.window.location.href = appLink;
-    //       } catch (err) {
-    //         showDialog(
-    //             context: context,
-    //             builder: (c) => AlertDialog(
-    //                   content: ListTile(
-    //                     leading: const Icon(
-    //                       Icons.error_outline_outlined,
-    //                     ),
-    //                     title: Wrap(
-    //                       children: [Text(err.toString())],
-    //                     ),
-    //                   ),
-    //                 ));
-    //       }
-    //     }),
-    //     builder: (c, s) =>
     return Scaffold(
       body: Container(
         height: double.infinity,
@@ -49,18 +24,54 @@ class ContractPageView extends StatelessWidget {
             Center(
                 child: Column(children: [
               Expanded(child: SizedBox()),
-              Icon(
-                Icons.downloading_rounded,
-                color: context.primaryContainer.withAlpha(190),
-                size: 300,
+              QrImageView(
+                data: contractDID,
+                version: QrVersions.auto,
+                size: 350.0,
+                backgroundColor: Colors.transparent,
+                foregroundColor: Colors.white,
               ),
               SizedBox(height: 30),
+              LayoutBuilder(
+                  builder: (ctx, cns) => cns.maxWidth >= 700
+                      ? Row(
+                          children: [
+                            const Expanded(child: SizedBox()),
+                            SizedBox(
+                              width: 400,
+                              child: ListTile(
+                                title: Wrap(
+                                  children: [Text(contractDID)],
+                                ),
+                                trailing: IconButton(
+                                    onPressed: () async {
+                                      await Clipboard.setData(
+                                          ClipboardData(text: contractDID));
+                                    },
+                                    icon: const Icon(Icons.copy)),
+                              ),
+                            ),
+                            const Expanded(child: SizedBox()),
+                          ],
+                        )
+                      : ListTile(
+                          title: Wrap(
+                            children: [Text(contractDID)],
+                          ),
+                          trailing: IconButton(
+                              onPressed: () async {
+                                await Clipboard.setData(
+                                    ClipboardData(text: contractDID));
+                              },
+                              icon: const Icon(Icons.copy)),
+                        )),
+              SizedBox(height: 20),
               TextButton.icon(
                   onPressed: () async {
                     await launchUrlString(Links.appDownloadRepoAddress);
                   },
                   label: Text('Download wallet app'),
-                  icon: Icon(Icons.download)),
+                  icon: Icon(Icons.downloading_rounded)),
               Expanded(child: SizedBox()),
             ]))
           ],
