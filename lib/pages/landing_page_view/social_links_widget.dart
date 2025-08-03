@@ -23,10 +23,6 @@ class SocialLinksWidget extends StatelessWidget {
               Ph.butterfly_fill,
               color: Colors.white,
             )),
-        IconButton.outlined(
-            onPressed: () async {
-              await launchUrlString(Links.linkedinLink);
-            },
             icon: Iconify(
               Carbon.logo_linkedin,
               color: Colors.white,
@@ -47,14 +43,6 @@ class SocialLinksWidget extends StatelessWidget {
               Carbon.logo_twitter,
               color: Colors.white,
             )),
-        // IconButton.outlined(
-        //     onPressed: () async {
-        //       await launchUrlString(Links.mediumLink);
-        //     },
-        //     icon: Iconify(
-        //       Carbon.logo_medium,
-        //       color: Colors.white,
-        //     )),
         const Expanded(child: SizedBox()),
       ],
     );
