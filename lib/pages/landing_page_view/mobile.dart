@@ -82,8 +82,21 @@ class LandingPageMobile extends StatelessWidget {
                   const Expanded(child: SizedBox()),
                   Wrap(
                     children: [
-                      Text(
-                        'Decentralized\nTrustless\nInfrastructure',
+                      Text.rich(
+                        TextSpan(children: [
+                          TextSpan(
+                              style: context.displayMedium!
+                                  .copyWith(color: Colors.white70),
+                              text: 'Decentralized\n'),
+                          TextSpan(
+                              style: context.displayLarge!
+                                  .copyWith(color: Colors.white70),
+                              text: 'Trustless\n'),
+                          TextSpan(
+                              style: context.displayMedium!
+                                  .copyWith(color: Colors.white70),
+                              text: 'Infrastructure')
+                        ]),
                         textAlign: TextAlign.center,
                         style: context.displayLarge!.copyWith(
                           fontWeight: FontWeight.bold,
