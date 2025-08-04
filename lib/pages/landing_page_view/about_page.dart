@@ -95,7 +95,6 @@ class __MovileViewState extends State<_MovileView> {
 
   @override
   Widget build(BuildContext context) {
-    var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.width;
     return Container(
         height: double.infinity,
@@ -111,8 +110,9 @@ class __MovileViewState extends State<_MovileView> {
                     child: Text(
                         style:
                             context.bodyLarge!.copyWith(color: Colors.white70),
-                        'About Contract Foundry'
-                        'Contract Foundry is a permissionless decentralized Web3 platform that empowers individuals, agencies, and enterprises to manage digital identities, sign legally binding contracts, and issue verifiable credentials without reliance on third parties. users interact directly with smart contracts, keeping full control over their data, identity, and digital assets.'
+                        textAlign: TextAlign.justify,
+                        'About Contract Foundry\n'
+                        '\nContract Foundry is a permissionless decentralized Web3 platform that empowers individuals, agencies, and enterprises to manage digital identities, sign legally binding contracts, and issue verifiable credentials without reliance on third parties. users interact directly with smart contracts, keeping full control over their data, identity, and digital assets.\n'
                         '\nVision\n'
                         '\nEmpowering sovereign users in a trustless Web3 where control, identity and trust are on-chain.\n'
                         '\nMission\n'
