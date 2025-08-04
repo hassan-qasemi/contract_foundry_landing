@@ -23,10 +23,6 @@ class SocialLinksWidget extends StatelessWidget {
               Ph.butterfly_fill,
               color: Colors.white,
             )),
-            icon: Iconify(
-              Carbon.logo_linkedin,
-              color: Colors.white,
-            )),
         IconButton.outlined(
             onPressed: () async {
               await launchUrlString(Links.telegramChannelLink);

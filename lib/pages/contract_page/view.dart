@@ -33,7 +33,7 @@ class ContractPageView extends StatelessWidget {
               ),
               SizedBox(height: 30),
               LayoutBuilder(
-                  builder: (ctx, cns) => cns.maxWidth >= 700
+                  builder: (ctx, cns) => cns.maxWidth >= 500
                       ? Row(
                           children: [
                             const Expanded(child: SizedBox()),

@@ -6,7 +6,6 @@ import 'package:contract_foundry_landing_page/pages/landing_page_view/social_lin
 import 'package:contract_foundry_landing_page/theme/text_theme_extensions.dart';
 import 'package:contract_foundry_landing_page/theme/theme_color_extension.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../service_intro_pages/mobile.dart';
@@ -34,6 +33,9 @@ class LandingPageMobile extends StatelessWidget {
                     enableDrag: true,
                     isDismissible: true,
                     showDragHandle: true,
+                    isScrollControlled: true,
+                    constraints: BoxConstraints(maxHeight: 230),
+                    backgroundColor: Colors.black87,
                     builder: (c) => ListView(
                           children: [
                             ListTile(
@@ -81,7 +83,7 @@ class LandingPageMobile extends StatelessWidget {
                   Wrap(
                     children: [
                       Text(
-                        'Decentralized\nTrustless\nInteractions',
+                        'Decentralized\nTrustless\nInfrastructure',
                         textAlign: TextAlign.center,
                         style: context.displayLarge!.copyWith(
                           fontWeight: FontWeight.bold,
@@ -102,9 +104,9 @@ class LandingPageMobile extends StatelessWidget {
                 asset: Assets.docAsset,
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
-                title: 'Document Certification',
+                title: 'Document Verification',
                 description:
-                    'On-Chain Document Cerification, automated verification and authentication, compliant signature,on-chain signature verification, immutable signature, immutable audit trails, multi signature support, expirable and revocable.',
+                    'Blockchain Certification, multi-chain automated verification, multi verifier support, revocable and time-bound',
               ),
               ServiceIntroCardMobileView(
                 asset: Assets.paperAsset,
@@ -112,7 +114,7 @@ class LandingPageMobile extends StatelessWidget {
                 w: MediaQuery.of(context).size.width,
                 title: 'P2P Payment',
                 description:
-                    'P2P trustless payment, fund safety, cancellable and expirable, payment rollback support, leaving contract with both side agreement.',
+                    'P2P trustless payment, fund safety, revocable and time-bound, rollback support, leaving contract with both side agreement.',
               ),
               ServiceIntroCardMobileView(
                 asset: Assets.apwAsset,
@@ -173,7 +175,7 @@ class _HeadPage extends StatelessWidget {
                   ),
                 ],
               )),
-          SizedBox(height: 20),
+          SizedBox(height: 25),
           Padding(
               padding: EdgeInsets.symmetric(horizontal: 30),
               child: Wrap(
@@ -181,13 +183,12 @@ class _HeadPage extends StatelessWidget {
                   Text(
                       'The Contract Foundry Wallet beta will be available to users on our early access list',
                       textAlign: TextAlign.center,
-                      style: context.bodyLarge!.copyWith(
+                      style: context.bodySmall!.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold))
                 ],
               )),
-          // SizedBox(height: 20),
-          // ContractLinkerSearchBar(),
-          const Expanded(child: SizedBox()),
+          SizedBox(height: 9),
+          // const Expanded(child: SizedBox()),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -213,7 +214,7 @@ class _HeadPage extends StatelessWidget {
   }
 
   final _description =
-      'Contract Foundry is a permissionless decentralized platform that provides self-sovereign identity, verifiable credentials, and trustless smart contracts as infrastructure.\n\nWe empower users to manage their data, verify contracts and credentials securely, privately, and without intermediaries. Built on blockchain and Web3 principles, our mission is to redefine trust through automation, transparency, and control.';
+      'Contract Foundry is a permissionless decentralized platform that provides self-sovereign identity, verifiable credentials, and enterprise-grade trustless infrastructure.\n\nWe empower users to manage their data, verify contracts and credentials securely, privately, and without intermediaries. Built on blockchain and Web3 principles, our mission is to redefine trust through automation, transparency, and control.';
 
 //   final _description = '''
 // Contract Foundry is a permissionless

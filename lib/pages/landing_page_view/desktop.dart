@@ -3,7 +3,6 @@ import 'package:contract_foundry_landing_page/config.dart';
 import 'package:contract_foundry_landing_page/theme/text_theme_extensions.dart';
 import 'package:contract_foundry_landing_page/theme/theme_color_extension.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import '../service_intro_pages/desktop.dart';
 import 'background.dart';
@@ -62,9 +61,9 @@ class LandingPageDesktop extends StatelessWidget {
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
                 rtl: true,
-                title: 'Document Certification',
+                title: 'Document Verification',
                 description:
-                    'On-Chain Document Cerification, multi-chain automated verification and authentication, compliant signature, on-chain signature verification, immutable signature, immutable audit trails, multi signature support, expirable and revocable',
+                    'Blockchain Certification, multi-chain automated verification,multi verifier support, revocable and time-bound',
               ),
               DesktopServiceTile(
                 asset: Assets.paperAsset,
@@ -72,7 +71,7 @@ class LandingPageDesktop extends StatelessWidget {
                 w: MediaQuery.of(context).size.width,
                 title: 'P2P Payment',
                 description:
-                    'P2P trustless payment, fund safety, cancellable and expirable, payment rollback support, leaving contract with both side agreement',
+                    'P2P trustless payment, fund safety, reovcable and time-bound, rollback support, leaving contract with both side agreement',
               ),
               DesktopServiceTile(
                 asset: Assets.apwAsset,
@@ -81,13 +80,13 @@ class LandingPageDesktop extends StatelessWidget {
                 rtl: true,
                 title: 'Asset Monetization',
                 description:
-                    'Global audit for creators and authors, blockchain-native paywall for selling digitall assets',
+                    'Global audit for creators and authors, blockchain-native paywall for selling downloadable digitall assets',
               ),
               DesktopServiceTile(
                 asset: Assets.idAsset,
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
-                title: 'Decentralized Identity',
+                title: 'Decentralized  Identity',
                 description:
                     'Self-Sovereign Identity, ERC1056, W3C DID support, multi-controller, Decentralized PublicKey Infrastructure',
               ),
@@ -130,7 +129,7 @@ class _HeadPage extends StatelessWidget {
                               children: [
                                 Text(
                                   'Contract Foundry',
-                                  style: context.displayMedium!.copyWith(
+                                  style: context.displayLarge!.copyWith(
                                       color: Colors.white70,
                                       fontWeight: FontWeight.bold),
                                 ),
@@ -148,26 +147,36 @@ class _HeadPage extends StatelessWidget {
                                           _description,
                                           style: context.bodyLarge!.copyWith(
                                               color: context.primaryColor),
-                                          textAlign: TextAlign.justify,
+                                          // textAlign: TextAlign.justify,
                                         )
                                       ],
                                     )),
-                                SizedBox(height: 10),
-                                Padding(
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 20),
-                                    child: Wrap(
-                                      children: [
-                                        Text(
-                                            'The Contract Foundry Wallet beta will be available to users on our early access list',
-                                            textAlign: TextAlign.center,
-                                            style: context.bodyLarge!.copyWith(
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.bold)),
-                                      ],
-                                    )),
+                                SizedBox(height: 25),
+                                // Padding(
+                                //     padding:
+                                //         EdgeInsets.symmetric(horizontal: 20),
+                                //     child: Wrap(
+                                //       children: [
+                                //         Text(
+                                //             'The Contract Foundry Wallet beta will be available to users on our early access list',
+                                //             textAlign: TextAlign.center,
+                                //             style: context.bodyMedium!.copyWith(
+                                //                 color: Colors.white,
+                                //                 fontWeight: FontWeight.bold)),
+                                //       ],
+                                //     )),
                                 ListTile(
-                                  leading: FilledButton.tonal(
+                                  title: Wrap(
+                                    children: [
+                                      Text(
+                                          'The Contract Foundry Wallet beta will be available to users on our early access list',
+                                          textAlign: TextAlign.center,
+                                          style: context.bodySmall!.copyWith(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold)),
+                                    ],
+                                  ),
+                                  trailing: FilledButton.tonal(
                                       onPressed: () async {
                                         await launchUrlString(
                                             Links.requestBetaLink);
@@ -212,7 +221,7 @@ class _HeadPage extends StatelessWidget {
   }
 
   final _description =
-      'Contract Foundry is a permissionless decentralized platform that provides self-sovereign identity, verifiable credentials, and trustless smart contracts as infrastructure.\n\nWe empower users to manage their data, verify contracts and credentials securely, privately, and without intermediaries. Built on blockchain and Web3 principles, our mission is to redefine trust through automation, transparency, and control.';
+      'Contract Foundry is a permissionless decentralized platform that provides self-sovereign identity, verifiable credentials, and enterprise-grade trustless infrastructure.\n\nWe empower users to manage their data, verify contracts and credentials securely, privately, and without intermediaries. Built on blockchain and Web3 principles, our mission is to redefine trust through automation, transparency, and control.';
 
 //   final _description = '''
 // Contract Foundry is a permissionless
