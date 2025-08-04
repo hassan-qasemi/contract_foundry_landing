@@ -99,26 +99,27 @@ class __MovileViewState extends State<_MovileView> {
     return Container(
         height: double.infinity,
         width: double.infinity,
-        margin: EdgeInsets.all(7),
+        padding: EdgeInsets.symmetric(horizontal: 30),
         // child: _buildInteractiveMDView(context, _aboutText, _controller)
         child: Column(
           children: [
             const Expanded(child: SizedBox()),
             SizedBox(
                 width: w,
-                child: Expanded(
-                    child: Text(
-                        style:
-                            context.bodyLarge!.copyWith(color: Colors.white70),
-                        textAlign: TextAlign.justify,
-                        'About Contract Foundry\n'
-                        '\nContract Foundry is a permissionless decentralized Web3 platform that empowers individuals, agencies, and enterprises to manage digital identities, sign legally binding contracts, and issue verifiable credentials without reliance on third parties. users interact directly with smart contracts, keeping full control over their data, identity, and digital assets.\n'
-                        '\nVision\n'
-                        '\nEmpowering sovereign users in a trustless Web3 where control, identity and trust are on-chain.\n'
-                        '\nMission\n'
-                        '\n- Develop secure and trustless smart contract as infrastructure'
-                        '\n- Enable trustless interactions without third-party regulatory'
-                        '\n- Ensure user sovereignty over identity, data, and digital assets\n\n'))),
+                child: Text(
+                    style: context.bodyLarge!.copyWith(color: Colors.white70),
+                    textAlign: TextAlign.justify,
+                    'About Contract Foundry\n'
+                    '\nContract Foundry is a permissionless trustless decentralized platform that'
+                    'enables users automate agreements, control sovereign identity, verify'
+                    'credentials instantly and certify and verify documents on blockchain securely without any middlemen.'
+                    'It eliminates intermediaries, enhances trust, and ensures transparency in'
+                    'business operations, driving efficiency and security in the Web3 era.'
+                    'Contract Foundry leverages blockchain technology to provide decentralized solutions, eliminating intermediaries and enabling secure, trustless and efficient operations.'
+                    '\n\nOur mission contains:'
+                    '\nDevelop secure and trustless smart contract as infrastructure.'
+                    '\nEnable trustless interactions without third-party regulatory.'
+                    '\nEnsure user sovereignty over identity, data, and digital assets.\n\n')),
             const Expanded(child: SizedBox()),
           ],
         ));
@@ -234,9 +235,9 @@ class __DesktopViewState extends State<_DesktopView> {
                               style: context.titleMedium!
                                   .copyWith(color: Colors.white70),
                               '\nMission\n'
-                              '\n- Develop secure and trustless smart contract as infrastructure'
-                              '\n- Enable trustless interactions without third-party regulatory'
-                              '\n- Ensure user sovereignty over identity, data, and digital assets\n\n')
+                              '\nDevelop secure and trustless smart contract as infrastructure.'
+                              '\nEnable trustless interactions without third-party regulatory.'
+                              '\nEnsure user sovereignty over identity, data, and digital assets.\n\n')
                         ],
                       ),
                     ),
