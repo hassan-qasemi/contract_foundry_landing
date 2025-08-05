@@ -117,17 +117,17 @@ class LandingPageMobile extends StatelessWidget {
                 asset: Assets.docAsset,
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
-                title: 'Document Verification',
+                title: 'OnChain Document Verification',
                 description:
-                    'Blockchain Certification, multi-chain automated verification, multi verifier support, revocable and time-bound',
+                    'Issue secure, tamper-proof digital qualifications with instant verification, building trust and preventing fraud effortlessly',
               ),
               ServiceIntroCardMobileView(
                 asset: Assets.paperAsset,
                 h: MediaQuery.of(context).size.height,
                 w: MediaQuery.of(context).size.width,
-                title: 'P2P Payment',
+                title: 'P2P Payment & Escrow',
                 description:
-                    'P2P trustless payment, fund safety, revocable and time-bound, rollback support, leaving contract with both side agreement.',
+                    'Enable risk-free transactions with automated escrow payments, funds release only when agreed conditions are met, eliminating disputes and middlemen',
               ),
               ServiceIntroCardMobileView(
                 asset: Assets.apwAsset,
@@ -135,7 +135,7 @@ class LandingPageMobile extends StatelessWidget {
                 w: MediaQuery.of(context).size.width,
                 title: 'Asset Monetization',
                 description:
-                    'Global audit for creators and authors, blockchain-native paywall for selling digitall assets.',
+                    'Securely audit and monetize digital creations worldwide with blockchain-based paywalls tailored for creators and authors',
               ),
               ServiceIntroCardMobileView(
                 asset: Assets.idAsset,
@@ -143,7 +143,7 @@ class LandingPageMobile extends StatelessWidget {
                 w: MediaQuery.of(context).size.width,
                 title: 'Decentralized Identity',
                 description:
-                    'Self-Sovereign Identity, ERC1056, W3C DID support, multi-controller, Decentralized PublicKey Infrastructure.',
+                    'Take control of your digital identity with privacy-focused, decentralized IDs (ERC1056/W3C compliant) and trusted credential issuance & verification',
               ),
               ServiceIntroCardMobileView(
                   asset: Assets.credAsset,
@@ -151,7 +151,7 @@ class LandingPageMobile extends StatelessWidget {
                   w: MediaQuery.of(context).size.width,
                   title: 'Verifiable Credentials',
                   description:
-                      'Wallet-First user centric credentials, based on W3C Verifiable Credentials v2.0, selective disclosure, standalone and registered credential support.'),
+                      'Wallet-first platform to issue tamper-proof digital credentials, offering instant verification, selective disclosure, and registered credentials for maximum trust'),
               AboutPage()
             ],
           )),
@@ -227,7 +227,10 @@ class _HeadPage extends StatelessWidget {
   }
 
   final _description =
-      'Contract Foundry is a permissionless decentralized platform that provides self-sovereign identity, verifiable credentials, and enterprise-grade trustless infrastructure.\n\nWe empower users to manage their data, verify contracts and credentials securely, privately, and without intermediaries. Built on blockchain and Web3 principles, our mission is to redefine trust through automation, transparency, and control.';
+      'Contract Foundry is a permissionless, decentralized platform offering self-sovereign identity, verifiable credentials, and enterprise-grade trustless infrastructure.\n'
+      '\nWe empower users to securely manage their data and verify contracts and credentials privately, without intermediaries. Built on blockchain and Web3 principles, our mission is to redefine trust through automation, transparency, and user control.\n';
+
+  // 'Contract Foundry is a permissionless decentralized platform that provides self-sovereign identity, verifiable credentials, and enterprise-grade trustless infrastructure.\n\nWe empower users to manage their data, verify contracts and credentials securely, privately, and without intermediaries. Built on blockchain and Web3 principles, our mission is to redefine trust through automation, transparency, and control.';
 
 //   final _description = '''
 // Contract Foundry is a permissionless

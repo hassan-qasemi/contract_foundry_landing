@@ -109,43 +109,22 @@ class __MovileViewState extends State<_MovileView> {
                 child: Text(
                     style: context.bodyLarge!.copyWith(color: Colors.white70),
                     textAlign: TextAlign.justify,
-                    'About Contract Foundry\n'
-                    '\nContract Foundry is a permissionless trustless decentralized platform that'
-                    'enables users automate agreements, control sovereign identity, verify'
-                    'credentials instantly and certify and verify documents on blockchain securely without any middlemen.'
-                    'It eliminates intermediaries, enhances trust, and ensures transparency in'
-                    'business operations, driving efficiency and security in the Web3 era.'
-                    'Contract Foundry leverages blockchain technology to provide decentralized solutions, eliminating intermediaries and enabling secure, trustless and efficient operations.'
-                    '\n\nOur mission contains:'
-                    '\nDevelop secure and trustless smart contract as infrastructure.'
-                    '\nEnable trustless interactions without third-party regulatory.'
-                    '\nEnsure user sovereignty over identity, data, and digital assets.\n\n')),
+                    _aboutText)),
             const Expanded(child: SizedBox()),
           ],
         ));
   }
 
   final _aboutText = '''
-### About
+About Contract Foundry
 
-Contract Foundry is a permissionless decentralized Web3 platform that empowers individuals, agencies, and enterprises to manage digital identities, sign legally binding contracts, and issue verifiable credentials without reliance on third parties. users interact directly with smart contracts, keeping full control over their data, identity, and digital assets.
+Contract Foundry is a decentralized, permissionless platform that lets users automate agreements, control their identity, verify credentials, and certify documents securely on the blockchain—without middlemen. It removes intermediaries, boosts trust, and ensures transparency, driving efficiency and security in the Web3 era.
 
-### Vision
+Our mission:
 
-Empowering sovereign users in a trustless Web3 where control, identity and trust are on-chain.
-
-### Mission
-
-- Develop secure and verifiable smart contract infrastructure.
-
-- Enable trustless interactions without third-party reliance.
-
-- Ensure user sovereignty over identity, data, and digital assets.
-
-Contact Us For Further Inquiries
-
-Email: [contractfoundry@gmail.com](contractfoundry@gmail.com)      
- ''';
+Develop secure, trustless smart contract infrastructure.
+Enable trustless interactions without third-party regulation.
+Ensure user sovereignty over identity, data, and digital assets.''';
 }
 
 class _DesktopView extends StatefulWidget {
