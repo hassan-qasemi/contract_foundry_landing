@@ -97,7 +97,7 @@ class LandingPageDesktop extends StatelessWidget {
                   rtl: true,
                   title: 'Verifiable Credentials',
                   description:
-                      'Wallet-first platform to issue tamper-proof digital credentials, offering instant verification, selective disclosure, and registered credentials for maximum trust'),
+                      'Issue tamper-proof wallet-first digital credentials, offering instant verification, selective disclosure, and registered credentials for maximum trust'),
               AboutPage()
             ],
           )
