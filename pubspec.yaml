@@ -79,6 +79,8 @@ flutter:
     - assets/payment.json
     - assets/signing.json
     - assets/signing.lottie
+    - assets/docs/tos
+    - assets/docs/privacy
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

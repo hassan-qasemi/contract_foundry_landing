@@ -1,10 +1,13 @@
+import 'package:contract_foundry_landing_page/services/md_doc_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'form.dart';
 
-class FAQPageMobileView extends StatelessWidget {
-  FAQPageMobileView({super.key});
+class MDDocPageMobileView extends StatelessWidget {
+  final MDDocModel doc;
+  final String title;
+  MDDocPageMobileView({super.key, required this.doc, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -12,22 +15,17 @@ class FAQPageMobileView extends StatelessWidget {
     final w = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title: Text('FAQ'),
+        title: Text(title),
         backgroundColor: Colors.transparent,
         elevation: 0,
-        actions: [
-          TextButton(
-              onPressed: () {
-                context.go('/');
-              },
-              child: Text('Home'))
-        ],
       ),
       body: Container(
         height: h,
         width: w,
         padding: const EdgeInsets.symmetric(horizontal: 4),
-        child: FAQForm(),
+        child: MDDocForm(
+          doc: doc,
+        ),
       ),
     );
   }

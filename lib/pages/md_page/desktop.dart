@@ -1,8 +1,12 @@
+import 'package:contract_foundry_landing_page/services/md_doc_handler.dart';
 import 'package:flutter/material.dart';
 import 'form.dart';
 
-class FAQPageDesktopView extends StatelessWidget {
-  FAQPageDesktopView({super.key});
+class MDDocPageDesktopView extends StatelessWidget {
+  final MDDocModel doc;
+  final String title;
+
+  MDDocPageDesktopView({super.key, required this.doc, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +14,7 @@ class FAQPageDesktopView extends StatelessWidget {
     final w = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title: Text('FAQ'),
+        title: Text(title),
       ),
       body: Row(
         children: [
@@ -18,7 +22,9 @@ class FAQPageDesktopView extends StatelessWidget {
           Container(
             height: h,
             width: w * .5,
-            child: FAQForm(),
+            child: MDDocForm(
+              doc: doc,
+            ),
           ),
           const Expanded(child: SizedBox()),
         ],
