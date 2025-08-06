@@ -22,7 +22,7 @@ final router = GoRouter(initialLocation: "/", routes: [
       name: 'privacy',
       builder: (context, state) => MDDocPageView(
             docPath: 'assets/docs/privacy',
-            title: 'Privacy and Policy',
+            title: 'Privacy Policy',
           )),
   GoRoute(
       path: '/terms',
