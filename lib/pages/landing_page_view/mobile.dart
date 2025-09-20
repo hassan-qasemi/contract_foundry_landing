@@ -171,7 +171,6 @@ class _HeadPage extends StatelessWidget {
                     _description,
                     style: context.bodyLarge!
                         .copyWith(color: context.primaryColor),
-                    textAlign: TextAlign.justify,
                   ),
                 ],
               )),

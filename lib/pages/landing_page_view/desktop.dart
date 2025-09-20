@@ -142,7 +142,7 @@ class _HeadPage extends StatelessWidget {
                                   title: Wrap(
                                     children: [
                                       Text(
-                                          'The Contract Foundry Wallet beta will be soon available',
+                                          'The Contract Foundry Wallet beta will be available soon',
                                           textAlign: TextAlign.center,
                                           style: context.bodySmall!.copyWith(
                                               color: Colors.white,

@@ -43,7 +43,6 @@ class __MovileViewState extends State<_MovileView> {
                 width: w,
                 child: Text(
                     style: context.bodyLarge!.copyWith(color: Colors.white70),
-                    textAlign: TextAlign.justify,
                     _aboutText)),
             const Expanded(child: SizedBox()),
           ],
