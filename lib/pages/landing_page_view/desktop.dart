@@ -21,13 +21,6 @@ class LandingPageDesktop extends StatelessWidget {
         surfaceTintColor: Colors.transparent,
         elevation: 0,
         actions: [
-          // TextButton.icon(
-          //   onPressed: () {
-          //     context.goNamed('contract_loader_page');
-          //   },
-          //   label: Text('Link contract'),
-          //   icon: const Icon(Icons.launch_outlined),
-          // ),
           TextButton(
               onPressed: () async {
                 await launchUrlString(Links.whitePaperLink);
@@ -145,24 +138,11 @@ class _HeadPage extends StatelessWidget {
                                       ],
                                     )),
                                 SizedBox(height: 25),
-                                // Padding(
-                                //     padding:
-                                //         EdgeInsets.symmetric(horizontal: 20),
-                                //     child: Wrap(
-                                //       children: [
-                                //         Text(
-                                //             'The Contract Foundry Wallet beta will be available to users on our early access list',
-                                //             textAlign: TextAlign.center,
-                                //             style: context.bodyMedium!.copyWith(
-                                //                 color: Colors.white,
-                                //                 fontWeight: FontWeight.bold)),
-                                //       ],
-                                //     )),
                                 ListTile(
                                   title: Wrap(
                                     children: [
                                       Text(
-                                          'The Contract Foundry Wallet beta will be available to users on our early access list',
+                                          'The Contract Foundry Wallet beta will be soon available',
                                           textAlign: TextAlign.center,
                                           style: context.bodySmall!.copyWith(
                                               color: Colors.white,
@@ -174,7 +154,7 @@ class _HeadPage extends StatelessWidget {
                                         await launchUrlString(
                                             Links.requestBetaLink);
                                       },
-                                      child: Text('Request Early Access')),
+                                      child: Text('Notify me')),
                                 ),
                               ],
                             ),
@@ -214,5 +194,5 @@ class _HeadPage extends StatelessWidget {
   }
 
   final _description =
-      'Contract Foundry is a trustless Smart Contract-as-a-Service platform that lets you manage payments, agreements, and data securely without intermediaries.\n\nWith decentralized identity, on-chain document verification, and trustless escrow services, you stay in full control of your assets, private keys, and documents. Every interaction is automated, transparent, and censorship-resistant, giving you true digital sovereignty.';
+      'Contract Foundry provides trustless smart contract infrastructure, lets you manage payments, agreements, and data securely without intermediaries.\n\nWith decentralized identity, on-chain document verification, and trustless escrow services, you stay in full control of your assets, private keys, and documents. Every interaction is automated, transparent, and censorship-resistant, giving you true digital sovereignty.';
 }

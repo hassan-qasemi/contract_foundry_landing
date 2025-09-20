@@ -50,13 +50,6 @@ class LandingPageMobile extends StatelessWidget {
                                 await launchUrlString(Links.whitePaperLink);
                               },
                             ),
-                            // ListTile(
-                            //   leading: const Icon(Icons.launch_outlined),
-                            //   title: Text('Link Contract'),
-                            //   onTap: () {
-                            //     context.goNamed('contract_loader_page');
-                            //   },
-                            // ),
                           ],
                         ));
               },
@@ -188,7 +181,7 @@ class _HeadPage extends StatelessWidget {
               child: Wrap(
                 children: [
                   Text(
-                      'The Contract Foundry Wallet beta will be available to users on our early access list',
+                      'The Contract Foundry Wallet beta will be available soon',
                       textAlign: TextAlign.center,
                       style: context.bodySmall!.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold))
@@ -204,7 +197,7 @@ class _HeadPage extends StatelessWidget {
                   onPressed: () async {
                     await launchUrlString(Links.requestBetaLink);
                   },
-                  child: Text('Request Early Access')),
+                  child: Text('Notify me')),
               const Expanded(child: SizedBox()),
             ],
           ),
@@ -221,5 +214,5 @@ class _HeadPage extends StatelessWidget {
   }
 
   final _description =
-      'Contract Foundry is a trustless Smart Contract-as-a-Service platform that lets you manage payments, agreements, and data securely without intermediaries.\n\nWith decentralized identity, on-chain document verification, and trustless escrow services, you stay in full control of your assets, private keys, and documents. Every interaction is automated, transparent, and censorship-resistant, giving you true digital sovereignty.';
+      'Contract Foundry provides trustless smart contract infrastructure, lets you manage payments, agreements, and data securely without intermediaries.\n\nWith decentralized identity, on-chain document verification, and trustless escrow services, you stay in full control of your assets, private keys, and documents. Every interaction is automated, transparent, and censorship-resistant, giving you true digital sovereignty.';
 }

@@ -57,11 +57,11 @@ Contract Foundry is a trustless SCaaS platform for managing payments, agreements
 
 Mission
 
-Empower individuals and businesses with full control over funds, data, and digital identity—eliminating intermediaries, enhancing privacy, and enabling secure, automated, and censorship-resistant interactions.
+Give individuals and businesses full control over funds, data, and identity—secure, private, and automated.
 
 Vision
 
-Create a world where people and organizations enjoy complete sovereignty over assets and data, enabling trustless, borderless agreements backed by secure, portable, and private identities.''';
+Enable a world of trustless, borderless agreements with portable, private digital identities.''';
 }
 
 class _DesktopView extends StatefulWidget {
