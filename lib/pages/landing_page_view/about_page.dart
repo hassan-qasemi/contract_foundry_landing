@@ -1,71 +1,6 @@
 import 'package:contract_foundry_landing_page/theme/text_theme_extensions.dart';
 import 'package:flutter/material.dart';
 
-// Widget _buildInteractiveMDView(
-//         BuildContext context, String md, ScrollController controller) =>
-//     InteractiveViewer(
-//       scaleEnabled: false,
-//       child: Markdown(
-//         styleSheetTheme: MarkdownStyleSheetBaseTheme.platform,
-//         styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)).copyWith(
-//             // Change color for paragraph text (default text)
-//             p: context.bodyLarge!.copyWith(
-//               color: Colors.white, // Your desired color for general text
-//             ),
-//             // Change color for headings (e.g., H1)
-//             h1: context.headlineLarge!.copyWith(
-//               color: Colors.white, // Your desired color for H1
-//             ),
-//             h3: context.headlineSmall!.copyWith(
-//               color: Colors.white, // Your desired color for H1
-//             ),
-//             h2: context.headlineMedium!.copyWith(
-//               color: Colors.white, // Your desired color for H1
-//             ),
-//             h5: context.displaySmall!.copyWith(
-//               color: Colors.white, // Your desired color for H1
-//             ),
-//             h6: context.displaySmall!.copyWith(
-//               color: Colors.white, // Your desired color for H1
-//             ),
-//             // Change color for links
-//             a: TextStyle(
-//               color: Colors.blueAccent, // Your desired color for links
-//               decoration: TextDecoration.underline, // Keep underline for links
-//             ),
-//             // Change color for code blocks
-//             code: TextStyle(
-//               color: Colors.blueAccent,
-//               backgroundColor:
-//                   Colors.grey.shade900, // Optional: for code block background
-//             ),
-//             // Change color for bold text (strong emphasis)
-//             strong: TextStyle(
-//               color: Colors.white,
-//               fontWeight: FontWeight.bold,
-//             ),
-//             // Change color for italic text (emphasis)
-//             em: TextStyle(
-//               color: Colors.white,
-//               fontStyle: FontStyle.italic,
-//             ),
-//             // Change color for blockquotes
-//             blockquote: TextStyle(
-//               color: Colors.white,
-//               fontStyle: FontStyle.italic,
-//             ),
-//             listBullet: TextStyle(
-//               color: Colors.white, // Color for list bullets
-//             ),
-//             textAlign: WrapAlignment.spaceEvenly),
-//         data: md,
-//         controller: controller,
-//         onTapLink: (text, href, title) {
-//           launchUrlString(href!);
-//         },
-//       ),
-//     );
-
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
 
@@ -118,13 +53,15 @@ class __MovileViewState extends State<_MovileView> {
   final _aboutText = '''
 About Contract Foundry
 
-Contract Foundry is a decentralized, permissionless platform that lets users automate agreements, control their identity, verify credentials, and certify documents securely on the blockchain—without middlemen. It removes intermediaries, boosts trust, and ensures transparency, driving efficiency and security in the Web3 era.
+Contract Foundry is a trustless SCaaS platform for managing payments, agreements, and data—without intermediaries. With on-chain verification, decentralized identity, and trustless escrows, users stay in full control of funds, keys, and documents, stored on IPFS, Arweave, or centralized options.
 
-Our mission:
+Mission
 
-Develop secure, trustless smart contract infrastructure.
-Enable trustless interactions without third-party regulation.
-Ensure user sovereignty over identity, data, and digital assets.''';
+Empower individuals and businesses with full control over funds, data, and digital identity—eliminating intermediaries, enhancing privacy, and enabling secure, automated, and censorship-resistant interactions.
+
+Vision
+
+Create a world where people and organizations enjoy complete sovereignty over assets and data, enabling trustless, borderless agreements backed by secure, portable, and private identities.''';
 }
 
 class _DesktopView extends StatefulWidget {
@@ -151,22 +88,6 @@ class __DesktopViewState extends State<_DesktopView> {
         height: double.infinity,
         width: double.infinity,
         padding: EdgeInsets.all(10),
-        // child: Row(
-        //   children: [
-        //     Expanded(
-        //         child: SizedBox(
-        //       child: _buildInteractiveMDView(context, _about, _controller),
-        //     )),
-        //     Expanded(
-        //         child: SizedBox(
-        //       child: _buildInteractiveMDView(context, _vision, _controller),
-        //     )),
-        //     Expanded(
-        //         child: SizedBox(
-        //       child: _buildInteractiveMDView(context, _mission, _controller),
-        //     )),
-        //   ],
-        // )
         child: Center(
           child: Row(
             children: [
@@ -202,7 +123,7 @@ class __DesktopViewState extends State<_DesktopView> {
                               style: context.titleMedium!
                                   .copyWith(color: Colors.white70),
                               '\nVision\n'
-                              '\nEmpowering sovereign users in a trustless Web3 where control, identity and trust are on-chain.')
+                              '\nWe envision a world where people and organizations enjoy complete sovereignty over their assets and data, enabling trustless, borderless agreements backed by secure, portable, and private identities. Contract Foundry is building the infrastructure to make this vision a reality.')
                         ],
                       ),
                     ),
@@ -214,9 +135,7 @@ class __DesktopViewState extends State<_DesktopView> {
                               style: context.titleMedium!
                                   .copyWith(color: Colors.white70),
                               '\nMission\n'
-                              '\nDevelop secure and trustless smart contract as infrastructure.'
-                              '\nEnable trustless interactions without third-party regulatory.'
-                              '\nEnsure user sovereignty over identity, data, and digital assets.\n\n')
+                              '\nOur mission is to empower individuals and enterprises with full control over their funds, data, and digital identity. We aim to eliminate intermediaries, enhance privacy, and enable secure, automated, and censorship-resistant interactions that put users in complete control.\n')
                         ],
                       ),
                     ),
@@ -232,42 +151,6 @@ class __DesktopViewState extends State<_DesktopView> {
         ));
   }
 
-  final about = '''
-About Contract Foundry
-
-Contract Foundry is a permissionless trustless decentralized platform that
-enables users automate agreements, control sovereign identity, verify
-credentials instantly and certify and verify documents on blockchain securely without any middlemen.
-
-It eliminates intermediaries, enhances trust, and ensures transparency in
-business operations, driving efficiency and security in the Web3 era.
-
-Contract Foundry leverages blockchain technology to provide decentralized solutions, eliminating intermediaries and enabling secure, trustless and efficient operations.
-''';
-
-//   final _about = '''
-// # About
-
-// Contract Foundry is a permissionless decentralized Web3 platform that empowers individuals, agencies, and enterprises to manage digital identities, sign legally binding contracts, and issue verifiable credentials without reliance on third parties. users interact directly with smart contracts, keeping full control over their data, identity, and digital assets.
-
-// Contact Us For Further Inquiries
-
-// Email: [contractfoundry@gmail.com](contractfoundry@gmail.com)
-// ''';
-
-//   final _vision = '''
-// # Vision
-
-// Empowering sovereign users in a trustless Web3 where control, identity and trust are on-chain.
-// ''';
-
-//   final _mission = '''
-// # Mission
-
-// - Develop secure and verifiable smart contract infrastructure.
-
-// - Enable trustless interactions without third-party reliance.
-
-// - Ensure user sovereignty over identity, data, and digital assets.
-// ''';
+  final about =
+      'About Contract Foundry\n\nContract Foundry is a Smart Contract-as-a-Service platform that provides trustless, non-custodial infrastructure, empowering users to manage payments, agreements, and data verification securely—without intermediaries. By combining trustless escrow services, on-chain document verification, and decentralized identity, Contract Foundry ensures users maintain full control over their funds, private keys, and documents.\n\nUnlike traditional platforms or centralized escrows, every interaction on Contract Foundry is executed transparently on-chain. Users can self-host documents via centralized or decentralized storage options like IPFS or Arweave, creating a fully trustless ecosystem where agreements, payments, and verifications are automated, censorship-resistant, and fraud-proof.';
 }

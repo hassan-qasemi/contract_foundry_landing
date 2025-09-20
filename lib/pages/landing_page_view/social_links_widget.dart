@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/carbon.dart';
 import 'package:iconify_flutter/icons/mdi.dart';
-import 'package:iconify_flutter/icons/ph.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class SocialLinksWidget extends StatelessWidget {
@@ -19,10 +18,7 @@ class SocialLinksWidget extends StatelessWidget {
             onPressed: () async {
               await launchUrlString(Links.blueskyLink);
             },
-            icon: Iconify(
-              Ph.butterfly_fill,
-              color: Colors.white,
-            )),
+            icon: ImageIcon(AssetImage('assets/bluesky-logo.ico'))),
         IconButton.outlined(
             onPressed: () async {
               await launchUrlString(Links.telegramChannelLink);

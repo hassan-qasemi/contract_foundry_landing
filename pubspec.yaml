@@ -80,6 +80,8 @@ flutter:
     - assets/signing.lottie
     - assets/docs/tos
     - assets/docs/privacy
+    - assets/bluesky-logo.ico
+    
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
