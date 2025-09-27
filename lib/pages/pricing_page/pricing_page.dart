@@ -47,15 +47,15 @@ class _DesktopView extends StatelessWidget {
             PriceCard(
                 title: 'Escrow',
                 description:
-                    '\n\n1% withdrawal fee, time-bound, revocable, for low-mid payments\n\nArbitrum: 0.0029 ETH\nPolygon: 424.9 POL'),
+                    '\n\n1% withdrawal fee, time-bound, revocable, for low-mid payments\n\nArbitrum: 0.0029 ETH\nPolygon: 52.21 POL'),
             PriceCard(
                 title: 'Document Registry',
                 description:
-                    '\n\nMulti-verifier, revocable, Expirable, existance proof\n\nArbitrum: 0.0019 ETH\nPolygon: 424.9 POL'),
+                    '\n\nMulti-verifier, revocable, Expirable, existance proof\n\nArbitrum: 0.0019 ETH\nPolygon: 34.2 POL'),
             PriceCard(
                 title: 'Asset Paywall',
                 description:
-                    '\n\nOn-chain payment, native token & stablecoin support\n\nArbitrum: 0.029 ETH\nPolygon: 424.9 POL')
+                    '\n\nOn-chain payment, native token & stablecoin support\n\nArbitrum: 0.029 ETH\nPolygon: 521.29 POL')
           ],
         ),
         const Expanded(child: SizedBox()),
