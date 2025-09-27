@@ -1,5 +1,6 @@
 import 'package:contract_foundry_landing_page/assets.dart';
 import 'package:contract_foundry_landing_page/config.dart';
+import 'package:contract_foundry_landing_page/pages/pricing_page/contract_prices_page.dart';
 import 'package:contract_foundry_landing_page/theme/text_theme_extensions.dart';
 import 'package:contract_foundry_landing_page/theme/theme_color_extension.dart';
 import 'package:flutter/material.dart';
@@ -89,6 +90,7 @@ class LandingPageDesktop extends StatelessWidget {
                   title: 'Verifiable Credentials',
                   description:
                       'Issue tamper-proof wallet-first digital credentials, offering instant verification, selective disclosure, and registered credentials for maximum trust'),
+              ContractPricesPage(),
               AboutPage()
             ],
           )
@@ -136,7 +138,7 @@ class _HeadPage extends StatelessWidget {
                                       children: [
                                         Text(
                                           _description,
-                                          style: context.titleLarge!.copyWith(
+                                          style: context.titleMedium!.copyWith(
                                               color: context.primaryColor),
                                           // textAlign: TextAlign.justify,
                                         )
