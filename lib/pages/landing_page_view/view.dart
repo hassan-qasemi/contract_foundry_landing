@@ -11,7 +11,7 @@ class LandingPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Banner(
         message: 'Patent Pending',
-        location: BannerLocation.topEnd,
+        location: BannerLocation.bottomEnd,
         child: Theme(
             data: ThemeData(
                 useMaterial3: true,

@@ -23,6 +23,11 @@ class LandingPageDesktop extends StatelessWidget {
         actions: [
           TextButton(
               onPressed: () async {
+                await launchUrlString(Links.documentsLink);
+              },
+              child: Text('Docs')),
+          TextButton(
+              onPressed: () async {
                 await launchUrlString(Links.whitePaperLink);
               },
               child: Text(
@@ -30,9 +35,9 @@ class LandingPageDesktop extends StatelessWidget {
               )),
           TextButton(
               onPressed: () async {
-                await launchUrlString(Links.documentsLink);
+                await launchUrlString(Links.appDownloadRepoAddress);
               },
-              child: Text('Docs')),
+              child: Text('Download Wallet')),
         ],
       ),
       body: Stack(
@@ -131,31 +136,31 @@ class _HeadPage extends StatelessWidget {
                                       children: [
                                         Text(
                                           _description,
-                                          style: context.bodyLarge!.copyWith(
+                                          style: context.titleLarge!.copyWith(
                                               color: context.primaryColor),
                                           // textAlign: TextAlign.justify,
                                         )
                                       ],
                                     )),
                                 SizedBox(height: 25),
-                                ListTile(
-                                  title: Wrap(
-                                    children: [
-                                      Text(
-                                          'The Contract Foundry Wallet beta will be available soon',
-                                          textAlign: TextAlign.center,
-                                          style: context.bodySmall!.copyWith(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold)),
-                                    ],
-                                  ),
-                                  trailing: FilledButton.tonal(
-                                      onPressed: () async {
-                                        await launchUrlString(
-                                            Links.requestBetaLink);
-                                      },
-                                      child: Text('Notify me')),
-                                ),
+                                // ListTile(
+                                //   title: Wrap(
+                                //     children: [
+                                //       Text(
+                                //           'The Contract Foundry Wallet beta will be available soon',
+                                //           textAlign: TextAlign.center,
+                                //           style: context.bodySmall!.copyWith(
+                                //               color: Colors.white,
+                                //               fontWeight: FontWeight.bold)),
+                                //     ],
+                                //   ),
+                                //   trailing: FilledButton.tonal(
+                                //       onPressed: () async {
+                                //         await launchUrlString(
+                                //             Links.requestBetaLink);
+                                //       },
+                                //       child: Text('Notify me')),
+                                // ),
                               ],
                             ),
                             const Expanded(child: SizedBox()),
@@ -194,5 +199,5 @@ class _HeadPage extends StatelessWidget {
   }
 
   final _description =
-      'Contract Foundry provides trustless smart contract infrastructure, lets you manage payments, agreements, and data securely without intermediaries.\n\nWith decentralized identity, on-chain document verification, and trustless escrow services, you stay in full control of your assets, private keys, and documents. Every interaction is automated, transparent, and censorship-resistant, giving you true digital sovereignty.';
+      'Contract Foundry enables users to manage payments, agreements, and documents securely, without middlemen. You stay in control, with trustless, transparent ecosystem.';
 }

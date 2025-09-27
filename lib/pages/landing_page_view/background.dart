@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -38,13 +40,24 @@ class _GlassmorphismBackgroundState extends State<GlassmorphismBackground>
     return AnimatedBuilder(
       animation: _controller,
       builder: (context, child) {
-        return CustomPaint(
-          size: Size.infinite,
-          painter: BlobPainter(
-            blobs: _blobs,
-            progress: _controller.value,
-            isDarkMode: widget.isDarkMode,
-          ),
+        return Stack(
+          children: [
+            CustomPaint(
+              size: Size.infinite,
+              painter: BlobPainter(
+                blobs: _blobs,
+                progress: _controller.value,
+                isDarkMode: widget.isDarkMode,
+              ),
+            ),
+            BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+              child: Container(
+                color:
+                    Colors.black.withOpacity(0), // required for BackdropFilter
+              ),
+            ),
+          ],
         );
       },
     );

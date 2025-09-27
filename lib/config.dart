@@ -9,5 +9,6 @@ class Links {
   static final String documentsLink =
       'https://contract-foundry.github.io/contract-foundry-documentation/';
   static final String telegramChannelLink = 'https://t.me/contractfoundry';
-  static final String appDownloadRepoAddress = '';
+  static final String appDownloadRepoAddress =
+      'https://github.com/contract-foundry/contract-foundry-wallet';
 }

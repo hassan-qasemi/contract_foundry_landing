@@ -50,6 +50,13 @@ class LandingPageMobile extends StatelessWidget {
                                 await launchUrlString(Links.whitePaperLink);
                               },
                             ),
+                            ListTile(
+                              title: Text('Download Walet'),
+                              onTap: () async {
+                                await launchUrlString(
+                                    Links.appDownloadRepoAddress);
+                              },
+                            ),
                           ],
                         ));
               },
@@ -93,13 +100,29 @@ class LandingPageMobile extends StatelessWidget {
                     ],
                   ),
                   const Expanded(child: SizedBox()),
+                  Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 30),
+                      child: Wrap(
+                        children: [
+                          Text(
+                            _description,
+                            style: context.titleMedium!
+                                .copyWith(color: context.primaryColor),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      )),
+                  SizedBox(height: 25),
+                  const Expanded(child: SizedBox()),
                   const CopyrightWidget(),
                   const SizedBox(
                     height: 20,
-                  )
+                  ),
+                  const SocialLinksWidget(),
+                  const SizedBox(height: 20),
                 ])),
               ),
-              _HeadPage(),
+              // _HeadPage(),
               ServiceIntroCardMobileView(
                 asset: Assets.docAsset,
                 h: MediaQuery.of(context).size.height,
@@ -146,6 +169,9 @@ class LandingPageMobile extends StatelessWidget {
       ),
     );
   }
+
+  final _description =
+      'Manage payments, agreements, and documents securely, without middlemen. Full control, trustless and transparent';
 }
 
 class _HeadPage extends StatelessWidget {
@@ -169,37 +195,38 @@ class _HeadPage extends StatelessWidget {
                 children: [
                   Text(
                     _description,
-                    style: context.bodyLarge!
+                    style: context.titleLarge!
                         .copyWith(color: context.primaryColor),
+                    textAlign: TextAlign.justify,
                   ),
                 ],
               )),
           SizedBox(height: 25),
-          Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              child: Wrap(
-                children: [
-                  Text(
-                      'The Contract Foundry Wallet beta will be available soon',
-                      textAlign: TextAlign.center,
-                      style: context.bodySmall!.copyWith(
-                          color: Colors.white, fontWeight: FontWeight.bold))
-                ],
-              )),
-          SizedBox(height: 9),
-          // const Expanded(child: SizedBox()),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              const Expanded(child: SizedBox()),
-              FilledButton.tonal(
-                  onPressed: () async {
-                    await launchUrlString(Links.requestBetaLink);
-                  },
-                  child: Text('Notify me')),
-              const Expanded(child: SizedBox()),
-            ],
-          ),
+          // Padding(
+          //     padding: EdgeInsets.symmetric(horizontal: 30),
+          //     child: Wrap(
+          //       children: [
+          //         Text(
+          //             'The Contract Foundry Wallet beta will be available soon',
+          //             textAlign: TextAlign.center,
+          //             style: context.bodySmall!.copyWith(
+          //                 color: Colors.white, fontWeight: FontWeight.bold))
+          //       ],
+          //     )),
+          // SizedBox(height: 9),
+          // // const Expanded(child: SizedBox()),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //   children: [
+          //     const Expanded(child: SizedBox()),
+          //     FilledButton.tonal(
+          //         onPressed: () async {
+          //           await launchUrlString(Links.requestBetaLink);
+          //         },
+          //         child: Text('Notify me')),
+          //     const Expanded(child: SizedBox()),
+          //   ],
+          // ),
           const Expanded(
             flex: 2,
             child: SizedBox(),
@@ -213,5 +240,5 @@ class _HeadPage extends StatelessWidget {
   }
 
   final _description =
-      'Contract Foundry provides trustless smart contract infrastructure, lets you manage payments, agreements, and data securely without intermediaries.\n\nWith decentralized identity, on-chain document verification, and trustless escrow services, you stay in full control of your assets, private keys, and documents. Every interaction is automated, transparent, and censorship-resistant, giving you true digital sovereignty.';
+      'Contract Foundry enables users to manage payments, agreements, and documents securely, without middlemen. You stay in control, with trustless, transparent ecosystem.';
 }
