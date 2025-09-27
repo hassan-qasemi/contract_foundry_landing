@@ -3,7 +3,8 @@ import 'package:contract_foundry_landing_page/config.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/background.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/about_page.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/social_links_widget.dart';
-import 'package:contract_foundry_landing_page/pages/pricing_page/contract_prices_page.dart';
+import 'package:contract_foundry_landing_page/pages/pricing_page/pricing_page.dart';
+import 'package:contract_foundry_landing_page/pages/pricing_page/subscription_pricing_page.dart';
 import 'package:contract_foundry_landing_page/theme/text_theme_extensions.dart';
 import 'package:contract_foundry_landing_page/theme/theme_color_extension.dart';
 import 'package:flutter/material.dart';
@@ -163,7 +164,8 @@ class LandingPageMobile extends StatelessWidget {
                   title: 'Verifiable Credentials',
                   description:
                       'Issue tamper-proof wallet-first digital credentials, offering instant verification, selective disclosure, and registered credentials for maximum trust'),
-              ContractPricesPage(),
+              PricingPage(),
+              SubscriptionPricingPage(),
               AboutPage()
             ],
           )),

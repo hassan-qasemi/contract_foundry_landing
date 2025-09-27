@@ -1,9 +1,9 @@
-import 'package:contract_foundry_landing_page/pages/widgets/contract_card.dart';
+import 'package:contract_foundry_landing_page/pages/widgets/price_card.dart';
 import 'package:contract_foundry_landing_page/theme/text_theme_extensions.dart';
 import 'package:flutter/material.dart';
 
-class ContractPricesPage extends StatelessWidget {
-  const ContractPricesPage({super.key});
+class SubscriptionPricingPage extends StatelessWidget {
+  const SubscriptionPricingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class _DesktopView extends StatelessWidget {
         ListTile(
           leading: const SizedBox(),
           title: Text(
-            'Pricing',
+            'Subscriptions',
             style: context.displayLarge!.copyWith(color: Colors.white),
           ),
           subtitle: Text(''),
@@ -37,25 +37,21 @@ class _DesktopView extends StatelessWidget {
         Wrap(
           children: [
             PriceCard(
-                title: 'Pledge',
+                title: 'Freelancer',
                 description:
-                    '\n\nEnterprise-grade ,massive payments, 0% withdrawal fee, time-bound, revocable, for mid-high payments, document linking\n\n 33 CFGT'),
+                    '\n\n25% Discount per item plus 66 CFGT, Independent contractors handling multiple clients or small projects.\n\nArbitrum: 0.3825 ETH\nPolygon: 6763.8 POL'),
             PriceCard(
-                title: 'Verifiable Document',
+                title: 'Agency',
                 description:
-                    '\n\nVerifier filtering, revocable, Expirable, existance proof\n\n9 CFGT'),
+                    '\n\n30% Discount per item plus 165 CFGT, Small to medium teams managing multiple clients/projects.\n\nArbitrum: 0.97 ETH\nPolygon: 17152.69 POL'),
             PriceCard(
-                title: 'Escrow',
+                title: 'Startup',
                 description:
-                    '\n\n1% withdrawal fee, time-bound, revocable, for low-mid payments\n\nArbitrum: 0.0029 ETH\nPolygon: 424.9 POL'),
+                    '\n\n35% Discount per item plus 264 CFGT, startups, product teams, or businesses in growth stage.\n\nArbitrum: 1.8 ETH\nPolygon: 31829.73 POL'),
             PriceCard(
-                title: 'Document Registry',
+                title: 'Enterprise',
                 description:
-                    '\n\nMulti-verifier, revocable, Expirable, existance proof\n\nArbitrum: 0.0019 ETH\nPolygon: 424.9 POL'),
-            PriceCard(
-                title: 'Asset Paywall',
-                description:
-                    '\n\nOn-chain payment, native token & stablecoin support\n\nArbitrum: 0.029 ETH\nPolygon: 424.9 POL')
+                    '\n\n40% Discount per item plus 363 CFGT, Corporations, governments and organizations with massive contract volumes.\n\nArbitrum: 4.78 ETH\nPolygon: 84525.6 POL'),
           ],
         ),
         const Expanded(child: SizedBox()),
@@ -81,35 +77,30 @@ class _MobileView extends StatelessWidget {
           ListTile(
             leading: const SizedBox(),
             title: Text(
-              'Pricing',
+              'Subscriptions',
               style: context.displayMedium!.copyWith(color: Colors.white),
             ),
           ),
           _space(),
           PriceCard(
-              title: 'Pledge',
+              title: 'Freelancer',
               description:
-                  '\n\nEnterprise-grade ,massive payments, 0% withdrawal fee, time-bound, revocable, for mid-high payments, document linking\n\n 33 CFGT'),
+                  '\n\n25% Discount per item plus 66 CFGT, Independent contractors handling multiple clients or small projects.\n\nArbitrum: 0.3825 ETH\nPolygon: 6763.8 POL'),
           _space(),
           PriceCard(
-              title: 'Verifiable Document',
+              title: 'Agency',
               description:
-                  '\n\nVerifier filtering, revocable, Expirable, existance proof\n\n9 CFGT'),
+                  '\n\n30% Discount per item plus 165 CFGT, Small to medium teams managing multiple clients/projects.\n\nArbitrum: 0.97 ETH\nPolygon: 17152.69 POL'),
           _space(),
           PriceCard(
-              title: 'Escrow',
+              title: 'Startup',
               description:
-                  '\n\n1% withdrawal fee, time-bound, revocable, for low-mid payments\n\nArbitrum: 0.0029 ETH\nPolygon: 424.9 POL'),
+                  '\n\n35% Discount per item plus 264 CFGT, startups, product teams, or businesses in growth stage.\n\nArbitrum: 1.8 ETH\nPolygon: 31829.73 POL'),
           _space(),
           PriceCard(
-              title: 'Document Registry',
+              title: 'Enterprise',
               description:
-                  '\n\nMulti-verifier, revocable, Expirable, existance proof\n\nArbitrum: 0.0019 ETH\nPolygon: 424.9 POL'),
-          _space(),
-          PriceCard(
-              title: 'Asset Paywall',
-              description:
-                  '\n\nOn-chain payment, native token & stablecoin support\n\nArbitrum: 0.029 ETH\nPolygon: 424.9 POL')
+                  '\n\n40% Discount per item plus 363 CFGT, Corporations, governments and organizations with massive contract volumes.\n\nArbitrum: 4.78 ETH\nPolygon: 84525.6 POL'),
         ],
       ),
     ));
