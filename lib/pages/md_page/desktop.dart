@@ -1,4 +1,4 @@
-import 'package:contract_foundry_landing_page/services/md_doc_handler.dart';
+import 'package:contract_foundry_landing_page/utils/md_doc_handler.dart';
 import 'package:flutter/material.dart';
 import 'form.dart';
 
