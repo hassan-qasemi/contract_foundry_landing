@@ -47,13 +47,13 @@ class LandingPageMobile extends StatelessWidget {
                               },
                             ),
                             ListTile(
-                              title: Text('Get Lightpaper'),
+                              title: Text('Lightpaper'),
                               onTap: () async {
                                 await launchUrlString(Links.whitePaperLink);
                               },
                             ),
                             ListTile(
-                              title: Text('Download Walet'),
+                              title: Text('Install Wallet'),
                               onTap: () async {
                                 await launchUrlString(
                                     Links.appDownloadRepoAddress);
@@ -175,7 +175,7 @@ class LandingPageMobile extends StatelessWidget {
   }
 
   final _description =
-      'Manage payments, agreements, and documents securely, without middlemen. Full control, trustless and transparent';
+      'Smart contract infrastructure enabling secure peer-to-peer interactions without intermediaries.';
 }
 
 class _HeadPage extends StatelessWidget {

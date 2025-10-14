@@ -33,13 +33,13 @@ class LandingPageDesktop extends StatelessWidget {
                 await launchUrlString(Links.whitePaperLink);
               },
               child: Text(
-                'Get Lightpaper',
+                'Lightpaper',
               )),
           TextButton(
               onPressed: () async {
                 await launchUrlString(Links.appDownloadRepoAddress);
               },
-              child: Text('Download Wallet')),
+              child: Text('Install Wallet')),
         ],
       ),
       body: Stack(
@@ -120,16 +120,17 @@ class _HeadPage extends StatelessWidget {
                           children: [
                             const Expanded(child: SizedBox()),
                             ListTile(
+                                leading: const SizedBox(),
                                 title: Wrap(
-                              children: [
-                                Text(
-                                  'Contract Foundry',
-                                  style: context.displayLarge!.copyWith(
-                                      color: Colors.white70,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            )),
+                                  children: [
+                                    Text(
+                                      'Contract Foundry',
+                                      style: context.displayLarge!.copyWith(
+                                          color: Colors.white70,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                )),
                             const Expanded(child: SizedBox()),
                             Wrap(
                               children: [
@@ -142,7 +143,7 @@ class _HeadPage extends StatelessWidget {
                                           _description,
                                           style: context.titleMedium!.copyWith(
                                               color: context.primaryColor),
-                                          // textAlign: TextAlign.justify,
+                                          textAlign: TextAlign.center,
                                         )
                                       ],
                                     )),
@@ -203,5 +204,5 @@ class _HeadPage extends StatelessWidget {
   }
 
   final _description =
-      'Contract Foundry enables users to manage payments, agreements, and documents securely, without middlemen. You stay in control, with trustless, transparent ecosystem.';
+      'Smart contract infrastructure enabling secure peer-to-peer interactions without intermediaries.';
 }
