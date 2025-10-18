@@ -124,7 +124,7 @@ class _HeadPage extends StatelessWidget {
                                 title: Wrap(
                                   children: [
                                     Text(
-                                      'MetaRune',
+                                      'FloRune',
                                       style: context.displayLarge!.copyWith(
                                           color: Colors.white70,
                                           fontWeight: FontWeight.bold),

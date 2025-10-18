@@ -14,7 +14,7 @@ class CopyrightWidget extends StatelessWidget {
               Wrap(
                 children: [
                   Text(
-                    'Copyright © 2025 MetaRune. All Rights Reserved.',
+                    'Copyright © 2025 FloRune. All Rights Reserved.',
                     textAlign: TextAlign.center,
                     style: context.bodySmall!.copyWith(color: Colors.white),
                   )

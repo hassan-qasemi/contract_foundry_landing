@@ -39,11 +39,11 @@ class _DesktopView extends StatelessWidget {
             PriceCard(
                 title: 'Pledge',
                 description:
-                    '\n\nEnterprise-grade ,massive payments, milestone payment, 0% withdrawal fee, time-bound, revocable, for mid-high payments, document linking\n\n 33 Rune'),
+                    '\n\nEnterprise-grade ,massive payments, milestone payment, 0% withdrawal fee, time-bound, revocable, for mid-high payments, document linking\n\n 33 \$Rune'),
             PriceCard(
                 title: 'Verifiable Document',
                 description:
-                    '\n\nVerifier filtering, revocable, Expirable, existance proof, linking to pledge contract\n\n9 Rune'),
+                    '\n\nVerifier filtering, revocable, Expirable, existance proof, linking to pledge contract\n\n9 \$Rune'),
             PriceCard(
                 title: 'Escrow',
                 description:

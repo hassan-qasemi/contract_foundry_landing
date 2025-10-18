@@ -1,11 +1,11 @@
 {
-    "name": "MetaRune",
-    "short_name": "MetaRune",
+    "name": "FloRune",
+    "short_name": "FloRune",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "MetaRune.",
+    "description": "FloRune.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
