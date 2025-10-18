@@ -24,7 +24,7 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Contract Foundry',
+      title: 'MetaRune',
       themeMode: ThemeMode.dark,
       darkTheme: ThemeData(
         useMaterial3: true,

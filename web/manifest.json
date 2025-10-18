@@ -1,11 +1,11 @@
 {
-    "name": "contract foundry",
-    "short_name": "contract foundry",
+    "name": "MetaRune",
+    "short_name": "MetaRune",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "contract foundry.",
+    "description": "MetaRune.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

@@ -24,7 +24,7 @@ class LandingPageMobile extends StatelessWidget {
           forceMaterialTransparency: true,
           elevation: 0,
           title: Text(
-            'Contract Foundry',
+            'MetaRune',
             style: context.headlineSmall!
                 .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
           ),
@@ -244,5 +244,5 @@ class _HeadPage extends StatelessWidget {
   }
 
   final _description =
-      'Contract Foundry enables users to manage payments, agreements, and documents securely, without middlemen. You stay in control, with trustless, transparent ecosystem.';
+      'MetaRune enables users to manage payments, agreements, and documents securely, without middlemen. You stay in control, with trustless, transparent ecosystem.';
 }

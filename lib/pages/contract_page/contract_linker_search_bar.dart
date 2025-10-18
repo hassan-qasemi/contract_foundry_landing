@@ -23,7 +23,7 @@
 //       checkDID(did);
 
 //       // context.go('/contract/$did');
-//       final appLink = 'https://contractfoundry.web.app/contract/$did';
+//       final appLink = 'https://MetaRune.web.app/contract/$did';
 //       html.window.location.href = appLink;
 //     } catch (err) {
 //       showDialog(
