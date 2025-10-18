@@ -1,11 +1,11 @@
 {
-    "name": "FloRune",
-    "short_name": "FloRune",
+    "name": "Florune",
+    "short_name": "Florune",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "FloRune.",
+    "description": "Florune.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

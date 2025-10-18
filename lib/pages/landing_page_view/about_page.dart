@@ -50,9 +50,9 @@ class __MovileViewState extends State<_MovileView> {
   }
 
   final _aboutText = '''
-About FloRune
+About Florune
 
-FloRune is a trustless SCaaS platform for managing payments, agreements, and data—without intermediaries. With on-chain verification, decentralized identity, and trustless escrows, users stay in full control of funds, keys, and documents, stored on IPFS, Arweave, or centralized options.
+Florune is a trustless SCaaS platform for managing payments, agreements, and data—without intermediaries. With on-chain verification, decentralized identity, and trustless escrows, users stay in full control of funds, keys, and documents, stored on IPFS, Arweave, or centralized options.
 
 Mission
 
@@ -122,7 +122,7 @@ class __DesktopViewState extends State<_DesktopView> {
                               style: context.titleMedium!
                                   .copyWith(color: Colors.white70),
                               '\nVision\n'
-                              '\nWe envision a world where people and organizations enjoy complete sovereignty over their assets and data, enabling trustless, borderless agreements backed by secure, portable, and private identities. FloRune is building the infrastructure to make this vision a reality.')
+                              '\nWe envision a world where people and organizations enjoy complete sovereignty over their assets and data, enabling trustless, borderless agreements backed by secure, portable, and private identities. Florune is building the infrastructure to make this vision a reality.')
                         ],
                       ),
                     ),
@@ -151,5 +151,5 @@ class __DesktopViewState extends State<_DesktopView> {
   }
 
   final about =
-      'About FloRune\n\nFloRune is a Smart Contract-as-a-Service platform that provides trustless, non-custodial infrastructure, empowering users to manage payments, agreements, and data verification securely—without intermediaries. By combining trustless escrow services, on-chain document verification, and decentralized identity, FloRune ensures users maintain full control over their funds, private keys, and documents.\n\nUnlike traditional platforms or centralized escrows, every interaction on FloRune is executed transparently on-chain. Users can self-host documents via centralized or decentralized storage options like IPFS or Arweave, creating a fully trustless ecosystem where agreements, payments, and verifications are automated, censorship-resistant, and fraud-proof.';
+      'About Florune\n\nFlorune is a Smart Contract-as-a-Service platform that provides trustless, non-custodial infrastructure, empowering users to manage payments, agreements, and data verification securely—without intermediaries. By combining trustless escrow services, on-chain document verification, and decentralized identity, Florune ensures users maintain full control over their funds, private keys, and documents.\n\nUnlike traditional platforms or centralized escrows, every interaction on Florune is executed transparently on-chain. Users can self-host documents via centralized or decentralized storage options like IPFS or Arweave, creating a fully trustless ecosystem where agreements, payments, and verifications are automated, censorship-resistant, and fraud-proof.';
 }
