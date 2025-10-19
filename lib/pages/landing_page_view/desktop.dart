@@ -19,6 +19,8 @@ class LandingPageDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text('Florune'),
+        titleTextStyle: context.displayMedium!.copyWith(color: Colors.white),
         forceMaterialTransparency: true,
         surfaceTintColor: Colors.transparent,
         elevation: 0,
@@ -121,14 +123,16 @@ class _HeadPage extends StatelessWidget {
                             const Expanded(child: SizedBox()),
                             ListTile(
                                 leading: const SizedBox(),
-                                title: Wrap(
+                                title: Row(
                                   children: [
+                                    const Expanded(child: SizedBox()),
                                     Text(
-                                      'Florune',
+                                      '',
                                       style: context.displayLarge!.copyWith(
                                           color: Colors.white70,
                                           fontWeight: FontWeight.bold),
                                     ),
+                                    const Expanded(child: SizedBox()),
                                   ],
                                 )),
                             const Expanded(child: SizedBox()),
