@@ -1,8 +1,11 @@
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:contract_foundry_landing_page/assets.dart';
 import 'package:contract_foundry_landing_page/config.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/background.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/about_page.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/social_links_widget.dart';
+import 'package:contract_foundry_landing_page/pages/landing_page_view/token_page.dart';
+import 'package:contract_foundry_landing_page/pages/landing_page_view/wallet_page.dart';
 import 'package:contract_foundry_landing_page/pages/pricing_page/pricing_page.dart';
 import 'package:contract_foundry_landing_page/pages/pricing_page/subscription_pricing_page.dart';
 import 'package:contract_foundry_landing_page/theme/text_theme_extensions.dart';
@@ -13,62 +16,113 @@ import 'package:url_launcher/url_launcher_string.dart';
 import '../service_intro_pages/mobile.dart';
 import 'copyright_widget.dart';
 
-class LandingPageMobile extends StatelessWidget {
+class LandingPageMobile extends StatefulWidget {
   const LandingPageMobile({super.key});
+
+  @override
+  State<LandingPageMobile> createState() => _LandingPageMobileState();
+}
+
+class _LandingPageMobileState extends State<LandingPageMobile> {
+  final _controller = PageController();
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          surfaceTintColor: Colors.transparent,
-          forceMaterialTransparency: true,
-          elevation: 0,
-          title: Text(
-            'Florune',
-            style: context.headlineSmall!
-                .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
-          ),
-          leading: IconButton(
-              onPressed: () {
-                showModalBottomSheet(
-                    context: context,
-                    enableDrag: true,
-                    isDismissible: true,
-                    showDragHandle: true,
-                    isScrollControlled: true,
-                    constraints: BoxConstraints(maxHeight: 230),
-                    backgroundColor: Colors.black87,
-                    builder: (c) => ListView(
-                          children: [
-                            ListTile(
-                              title: Text('Docs'),
-                              onTap: () async {
-                                await launchUrlString(Links.documentsLink);
-                              },
-                            ),
-                            ListTile(
-                              title: Text('Lightpaper'),
-                              onTap: () async {
-                                await launchUrlString(Links.whitePaperLink);
-                              },
-                            ),
-                            ListTile(
-                              title: Text('Install Wallet'),
-                              onTap: () async {
-                                await launchUrlString(
-                                    Links.appDownloadRepoAddress);
-                              },
-                            ),
-                          ],
-                        ));
+      drawer: Drawer(
+        surfaceTintColor: Colors.black87,
+        backgroundColor: Colors.black87,
+        child: ListView(
+          children: [
+            const SizedBox(
+              height: 30,
+            ),
+            ListTile(
+              leading: AvatarGlow(
+                glowColor: context.surfaceContainer,
+                child: CircleAvatar(
+                  backgroundColor: Colors.transparent,
+                  backgroundImage:
+                      NetworkImage('./icons/android-chrome-192x192.png'),
+                ),
+              ),
+              title: Text(
+                'Florune',
+                style: context.titleLarge!.copyWith(color: Colors.white),
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            ListTile(
+              title: Text('Wallet'),
+              onTap: () {
+                _controller.jumpToPage(7);
               },
-              icon: const Icon(Icons.sort))),
+            ),
+            // ListTile(
+            //   title: Text('Lightpaper'),
+            //   onTap: () async {
+            //     await launchUrlString(Links.whitePaperLink);
+            //   },
+            // ),
+            ListTile(
+              title: Text('Permissiones & Tokens'),
+              onTap: () async {
+                _controller.jumpToPage(8);
+              },
+            ),
+            ListTile(
+              title: Text('Pricing'),
+              onTap: () async {
+                _controller.jumpToPage(9);
+              },
+            ),
+            ListTile(
+              title: Text('Subscriptions'),
+              onTap: () async {
+                _controller.jumpToPage(10);
+              },
+            ),
+            ListTile(
+              title: Text('Docs'),
+              trailing: const Icon(Icons.launch_outlined),
+              onTap: () async {
+                await launchUrlString(Links.documentsLink);
+              },
+            ),
+            ListTile(
+              title: Text('About Us'),
+              onTap: () async {
+                _controller.jumpToPage(11);
+              },
+            ),
+          ],
+        ),
+      ),
+      appBar: AppBar(
+        surfaceTintColor: Colors.transparent,
+        forceMaterialTransparency: true,
+        elevation: 0,
+        title: Text(
+          'Florune',
+          style: context.headlineSmall!
+              .copyWith(fontWeight: FontWeight.bold, color: Colors.white),
+        ),
+      ),
       body: Stack(
         children: [
           GlassmorphismBackground(isDarkMode: true),
           Center(
               child: PageView(
             scrollDirection: Axis.vertical,
+            controller: _controller,
             children: [
               Container(
                 height: double.infinity,
@@ -102,29 +156,14 @@ class LandingPageMobile extends StatelessWidget {
                     ],
                   ),
                   const Expanded(child: SizedBox()),
-                  Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 30),
-                      child: Wrap(
-                        children: [
-                          Text(
-                            _description,
-                            style: context.titleMedium!
-                                .copyWith(color: context.primaryColor),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      )),
                   SizedBox(height: 25),
-                  const Expanded(child: SizedBox()),
                   const CopyrightWidget(),
                   const SizedBox(
                     height: 20,
                   ),
-                  const SocialLinksWidget(),
-                  const SizedBox(height: 20),
                 ])),
               ),
-              // _HeadPage(),
+              _HeadPage(),
               ServiceIntroCardMobileView(
                 asset: Assets.docAsset,
                 h: MediaQuery.of(context).size.height,
@@ -164,6 +203,8 @@ class LandingPageMobile extends StatelessWidget {
                   title: 'Verifiable Credentials',
                   description:
                       'Issue tamper-proof wallet-first digital credentials, offering instant verification, selective disclosure, and registered credentials for maximum trust'),
+              WalletIntroPageView(),
+              TokenPage(),
               PricingPage(),
               SubscriptionPricingPage(),
               AboutPage()
@@ -183,60 +224,39 @@ class _HeadPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final h = MediaQuery.of(context).size.height;
-    final w = MediaQuery.of(context).size.width;
     return Container(
       height: double.infinity,
       width: double.infinity,
-      padding: EdgeInsets.all(w * .01),
       color: Colors.transparent,
-      child: Column(
+      child: ListView(
         children: [
-          const Expanded(child: SizedBox()),
-          Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              child: Wrap(
-                children: [
-                  Text(
-                    _description,
-                    style: context.titleLarge!
-                        .copyWith(color: context.primaryColor),
-                    textAlign: TextAlign.justify,
-                  ),
-                ],
-              )),
-          SizedBox(height: 25),
-          // Padding(
-          //     padding: EdgeInsets.symmetric(horizontal: 30),
-          //     child: Wrap(
-          //       children: [
-          //         Text(
-          //             'The Contract Foundry Wallet beta will be available soon',
-          //             textAlign: TextAlign.center,
-          //             style: context.bodySmall!.copyWith(
-          //                 color: Colors.white, fontWeight: FontWeight.bold))
-          //       ],
-          //     )),
-          // SizedBox(height: 9),
-          // // const Expanded(child: SizedBox()),
-          // Row(
-          //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-          //   children: [
-          //     const Expanded(child: SizedBox()),
-          //     FilledButton.tonal(
-          //         onPressed: () async {
-          //           await launchUrlString(Links.requestBetaLink);
-          //         },
-          //         child: Text('Notify me')),
-          //     const Expanded(child: SizedBox()),
-          //   ],
-          // ),
-          const Expanded(
-            flex: 2,
-            child: SizedBox(),
+          SizedBox(height: 50),
+          ListTile(
+            title: Text(
+              'Florune on top of ContractFoundry',
+              style: context.titleLarge!.copyWith(color: Colors.white),
+            ),
           ),
-          const SizedBox(height: 20),
-          const SocialLinksWidget(),
+          SizedBox(
+            height: 35,
+          ),
+          Wrap(
+            children: [
+              Padding(
+                  padding: EdgeInsets.only(left: 20, right: 20, bottom: 40),
+                  child: Wrap(
+                    children: [
+                      Text(
+                        _description,
+                        style:
+                            context.titleMedium!.copyWith(color: Colors.white),
+                        textAlign: TextAlign.justify,
+                      )
+                    ],
+                  )),
+              SizedBox(height: 25),
+            ],
+          ),
           const SizedBox(height: 20),
         ],
       ),
@@ -244,5 +264,7 @@ class _HeadPage extends StatelessWidget {
   }
 
   final _description =
-      'Florune enables users to manage payments, agreements, and documents securely, without middlemen. You stay in control, with trustless, transparent ecosystem.';
+      '''Florune is the inaugural application of the Contract Foundry ecosystem, a sovereign onchain jurisdiction for enterprise-grade agreements. This trustless, permissioned infrastructure converges decentralized identity, tamper-proof document verification, and non-custodial smart contracts to replace intermediary-dependent processes with immutable, executable logic.
+
+Within this environment, financial obligations are bound directly to verifiable actions. Onchain digital signatures autonomously control the flow of capital through P2P escrow and payments, ensuring execution is contingent solely upon cryptographically proven performance. The result is a closed-loop system that eliminates disputes by design, providing a court-admissible record of truth and establishing a new paradigm of operational integrity.''';
 }

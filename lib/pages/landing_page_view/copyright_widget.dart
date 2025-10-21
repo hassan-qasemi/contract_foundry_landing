@@ -14,7 +14,7 @@ class CopyrightWidget extends StatelessWidget {
               Wrap(
                 children: [
                   Text(
-                    'Copyright © 2025 Florune. All Rights Reserved.',
+                    'Copyright © 2025 ContractFoundry. All Rights Reserved.\nFlorune - Early Access.',
                     textAlign: TextAlign.center,
                     style: context.bodySmall!.copyWith(color: Colors.white),
                   )

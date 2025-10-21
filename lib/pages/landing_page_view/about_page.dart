@@ -1,5 +1,8 @@
+import 'package:contract_foundry_landing_page/config.dart';
+import 'package:contract_foundry_landing_page/pages/landing_page_view/social_links_widget.dart';
 import 'package:contract_foundry_landing_page/theme/text_theme_extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
@@ -36,31 +39,61 @@ class __MovileViewState extends State<_MovileView> {
         width: double.infinity,
         padding: EdgeInsets.symmetric(horizontal: 30),
         // child: _buildInteractiveMDView(context, _aboutText, _controller)
-        child: Column(
+        child: ListView(
           children: [
-            const Expanded(child: SizedBox()),
             SizedBox(
-                width: w,
-                child: Text(
-                    style: context.bodyLarge!.copyWith(color: Colors.white70),
-                    _aboutText)),
-            const Expanded(child: SizedBox()),
+              height: 30,
+            ),
+            _buildInfoTile('About Us', [_aboutText]),
+            _buildInfoTile('Vision', [
+              'We envision a world where people and organizations enjoy complete sovereignty over their assets and data, enabling trustless, borderless agreements backed by secure, portable, and private identities. Florune is building the infrastructure to make this vision a reality.'
+            ]),
+            _buildInfoTile('Mission', [
+              'Our mission is to empower individuals and enterprises with full control over their funds, data, and digital identity. We aim to eliminate intermediaries, enhance privacy, and enable secure, automated, and censorship-resistant interactions that put users in complete control.'
+            ]),
+            _buildInfoTile('Learn', []),
+            ListTile(
+              leading: TextButton.icon(
+                label: Text('Get LightPaper'),
+                onPressed: () async {
+                  await launchUrlString(Links.whitePaperLink);
+                },
+                icon: const Icon(Icons.launch_outlined),
+              ),
+            ),
+            _buildInfoTile(
+                'More info, sales & feedback ', ['info@florune.net']),
+            _buildInfoTile('Adminstration contact', ['admin@florune.net']),
+            _buildInfoTile('Social media', []),
+            SocialLinksWidget(),
+            SizedBox(
+              height: 30,
+            )
           ],
         ));
   }
 
+  Widget _buildInfoTile(String title, List<String> body) => Column(
+        children: [
+          ListTile(
+              title: Text(
+            title,
+            style: context.titleLarge!.copyWith(color: Colors.white),
+          )),
+          ...body.map((e) => ListTile(
+                title: Text(
+                  e,
+                  style: context.bodyMedium!.copyWith(color: Colors.white),
+                ),
+              ))
+        ],
+      );
+
   final _aboutText = '''
-About Florune
 
-Florune is a trustless SCaaS platform for managing payments, agreements, and data—without intermediaries. With on-chain verification, decentralized identity, and trustless escrows, users stay in full control of funds, keys, and documents, stored on IPFS, Arweave, or centralized options.
+Florune empowers sovereign control over digital agreements and payments. Our platform integrates non-custodial escrow, on-chain verification, and decentralized identity to enable secure, intermediary-free transactions. Every interaction executes through transparent smart contracts, creating a tamper-proof system where users maintain full control of assets and data.
 
-Mission
-
-Give individuals and businesses full control over funds, data, and identity—secure, private, and automated.
-
-Vision
-
-Enable a world of trustless, borderless agreements with portable, private digital identities.''';
+Florune embodies the principles of financial autonomy and censorship-resistant technology. We create tools for trustless transactions where users can securely manage agreements through decentralized storage and automated smart contracts, ensuring complete sovereignty over digital interactions.  ''';
 }
 
 class _DesktopView extends StatefulWidget {
@@ -81,75 +114,75 @@ class __DesktopViewState extends State<_DesktopView> {
 
   @override
   Widget build(BuildContext context) {
-    var h = MediaQuery.of(context).size.height;
-    var w = MediaQuery.of(context).size.width;
     return Container(
         height: double.infinity,
         width: double.infinity,
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(35),
         child: Center(
           child: Row(
             children: [
-              const Expanded(
-                child: SizedBox(),
-              ),
-              SizedBox(
-                  width: w * .4,
-                  height: h,
+              Expanded(
+                child: SizedBox(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Text(
-                        style: context.titleMedium!
-                            .copyWith(color: Colors.white70),
-                        about,
-                        // textAlign: TextAlign.justify,
-                      )
+                      _buildInfoTile('About Us', [about]),
+                      _buildInfoTile('Vision', [
+                        'We envision a world where people and organizations enjoy complete sovereignty over their assets and data, enabling trustless, borderless agreements backed by secure, portable, and private identities. Florune is building the infrastructure to make this vision a reality.'
+                      ]),
+                      _buildInfoTile('Mission', [
+                        'Our mission is to empower individuals and enterprises with full control over their funds, data, and digital identity. We aim to eliminate intermediaries, enhance privacy, and enable secure, automated, and censorship-resistant interactions that put users in complete control.'
+                      ]),
                     ],
-                  )),
-              SizedBox(
-                width: w * .4,
-                height: h,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    const Expanded(child: SizedBox()),
-                    SizedBox(
-                      width: w * .3,
-                      child: Wrap(
-                        children: [
-                          Text(
-                              style: context.titleMedium!
-                                  .copyWith(color: Colors.white70),
-                              '\nVision\n'
-                              '\nWe envision a world where people and organizations enjoy complete sovereignty over their assets and data, enabling trustless, borderless agreements backed by secure, portable, and private identities. Florune is building the infrastructure to make this vision a reality.')
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      width: w * .3,
-                      child: Wrap(
-                        children: [
-                          Text(
-                              style: context.titleMedium!
-                                  .copyWith(color: Colors.white70),
-                              '\nMission\n'
-                              '\nOur mission is to empower individuals and enterprises with full control over their funds, data, and digital identity. We aim to eliminate intermediaries, enhance privacy, and enable secure, automated, and censorship-resistant interactions that put users in complete control.\n')
-                        ],
-                      ),
-                    ),
-                    const Expanded(child: SizedBox()),
-                  ],
+                  ),
                 ),
               ),
-              const Expanded(
-                child: SizedBox(),
+              Expanded(
+                child: SizedBox(
+                  child: Column(
+                    children: [
+                      _buildInfoTile('Learn', []),
+                      ListTile(
+                        leading: TextButton.icon(
+                          label: Text('Get LightPaper'),
+                          onPressed: () async {
+                            await launchUrlString(Links.whitePaperLink);
+                          },
+                          icon: const Icon(Icons.launch_outlined),
+                        ),
+                      ),
+                      _buildInfoTile(
+                          'More info, sales & feedback ', ['info@florune.net']),
+                      _buildInfoTile(
+                          'Adminstration contact', ['admin@florune.net']),
+                      _buildInfoTile('Social media', []),
+                      SocialLinksWidget()
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
         ));
   }
 
-  final about =
-      'About Florune\n\nFlorune is a Smart Contract-as-a-Service platform that provides trustless, non-custodial infrastructure, empowering users to manage payments, agreements, and data verification securely—without intermediaries. By combining trustless escrow services, on-chain document verification, and decentralized identity, Florune ensures users maintain full control over their funds, private keys, and documents.\n\nUnlike traditional platforms or centralized escrows, every interaction on Florune is executed transparently on-chain. Users can self-host documents via centralized or decentralized storage options like IPFS or Arweave, creating a fully trustless ecosystem where agreements, payments, and verifications are automated, censorship-resistant, and fraud-proof.';
+  Widget _buildInfoTile(String title, List<String> body) => Column(
+        children: [
+          ListTile(
+              title: Text(
+            title,
+            style: context.titleLarge!.copyWith(color: Colors.white),
+          )),
+          ...body.map((e) => ListTile(
+                title: Text(
+                  e,
+                  style: context.bodyMedium!.copyWith(color: Colors.white),
+                ),
+              ))
+        ],
+      );
+
+  final about = '''
+Florune empowers sovereign control over digital agreements and payments. Our platform integrates non-custodial escrow, on-chain verification, and decentralized identity to enable secure, intermediary-free transactions. Every interaction executes through transparent smart contracts, creating a tamper-proof system where users maintain full control of assets and data.
+
+Florune embodies the principles of financial autonomy and censorship-resistant technology. We create tools for trustless transactions where users can securely manage agreements through decentralized storage and automated smart contracts, ensuring complete sovereignty over digital interactions.  ''';
 }
