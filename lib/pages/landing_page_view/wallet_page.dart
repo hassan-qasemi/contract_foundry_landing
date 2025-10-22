@@ -122,73 +122,68 @@ class __MobileViewState extends State<_MobileView> {
     return Container(
         height: double.infinity,
         width: double.infinity,
+        padding: EdgeInsets.symmetric(horizontal: 25),
         // padding: EdgeInsets.symmetric(horizontal: 55, vertical: 15),
         child: Center(
-            child: Expanded(
-                child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 25),
-                    child: ListView(children: [
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      AvatarGlow(
-                          glowColor: context.surfaceContainer,
-                          repeat: true,
-                          animate: true,
-                          child: Icon(
-                            Icons.downloading_rounded,
-                            size: context.displayLarge!.fontSize! * 5,
-                            color: context.primaryColor.withAlpha(80),
-                          )),
-                      const SizedBox(
-                        height: 50,
-                      ),
-                      Text(
-                        'Install Wallet',
-                        style: context.displayLarge!.copyWith(
-                            color: context.primaryColor.withAlpha(80)),
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(
-                        height: 150,
-                      ),
-                      SizedBox(
-                          width: 500,
-                          child: ListTile(
-                            leading: Iconify(Ph.github_logo,
-                                color: context.primaryColor),
-                            title: Text('From Github'),
-                            trailing: TextButton.icon(
-                              onPressed: () async {
-                                await launchUrlString(
-                                    Links.appDownloadRepoAddress);
-                              },
-                              label: Text(
-                                'Install',
-                              ),
-                              icon: const Icon(Icons.launch_outlined),
-                            ),
-                          )),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      Text(
-                        'Florune Wallet: The Secure Gateway to the ContractFoundry Ecosystem\n\n',
-                        style:
-                            context.titleLarge!.copyWith(color: Colors.white),
-                      ),
-                      Text(
-                        _descriptions,
-                        style: context.bodyLarge!.copyWith(color: Colors.white),
-                        textAlign: TextAlign.justify,
-                      ),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                    ])))));
+            child: ListView(children: [
+          const SizedBox(
+            height: 30,
+          ),
+          AvatarGlow(
+              glowColor: context.surfaceContainer,
+              repeat: true,
+              animate: true,
+              child: Icon(
+                Icons.downloading_rounded,
+                size: context.displayLarge!.fontSize! * 5,
+                color: context.primaryColor.withAlpha(80),
+              )),
+          const SizedBox(
+            height: 50,
+          ),
+          Text(
+            'Install Wallet',
+            style: context.displayLarge!
+                .copyWith(color: context.primaryColor.withAlpha(80)),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(
+            height: 150,
+          ),
+          SizedBox(
+              width: 500,
+              child: ListTile(
+                leading: Iconify(Ph.github_logo, color: context.primaryColor),
+                title: Text('From Github'),
+                trailing: TextButton.icon(
+                  onPressed: () async {
+                    await launchUrlString(Links.appDownloadRepoAddress);
+                  },
+                  label: Text(
+                    'Install',
+                  ),
+                  icon: const Icon(Icons.launch_outlined),
+                ),
+              )),
+          const SizedBox(
+            height: 30,
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          Text(
+            'Florune Wallet: The Secure Gateway to the ContractFoundry Ecosystem\n\n',
+            style: context.titleLarge!.copyWith(color: Colors.white),
+          ),
+          Text(
+            _descriptions,
+            style: context.bodyLarge!.copyWith(color: Colors.white),
+            textAlign: TextAlign.justify,
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+        ])));
   }
 
   final _descriptions = '''

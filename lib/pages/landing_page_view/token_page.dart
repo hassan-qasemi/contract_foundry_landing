@@ -116,58 +116,56 @@ class __MobileViewState extends State<_MobileView> {
     return Container(
         height: double.infinity,
         width: double.infinity,
+        padding: EdgeInsets.symmetric(horizontal: 25),
         // padding: EdgeInsets.symmetric(horizontal: 55, vertical: 15),
         child: Center(
-            child: Expanded(
-                child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 25),
-                    child: ListView(children: [
-                      const SizedBox(
-                        height: 50,
-                      ),
-                      AvatarGlow(
-                          glowColor: context.surfaceContainer,
-                          repeat: true,
-                          animate: true,
-                          child: Icon(
-                            Icons.token_outlined,
-                            size: context.displayLarge!.fontSize! * 5,
-                            color: context.primaryColor.withAlpha(80),
-                          )),
-                      const SizedBox(
-                        height: 50,
-                      ),
-                      Text(
-                        'Permissions & Tokens',
-                        style: context.displayLarge!.copyWith(
-                            color: context.primaryColor.withAlpha(80)),
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(
-                        height: 150,
-                      ),
-                      Text(
-                        _descriptions,
-                        style: context.bodyLarge!.copyWith(color: Colors.white),
-                        textAlign: TextAlign.justify,
-                      ),
-                      // const Expanded(child: SizedBox()),
-                      ListTile(
-                        trailing: TextButton.icon(
-                          onPressed: null,
-                          label: Text('Mint Flare'),
-                          icon: const Icon(Icons.launch_outlined),
-                        ),
-                        leading: TextButton.icon(
-                          onPressed: null,
-                          label: Text('Request Permission'),
-                          icon: const Icon(Icons.launch_outlined),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 50,
-                      ),
-                    ])))));
+            child: ListView(children: [
+          const SizedBox(
+            height: 50,
+          ),
+          AvatarGlow(
+              glowColor: context.surfaceContainer,
+              repeat: true,
+              animate: true,
+              child: Icon(
+                Icons.token_outlined,
+                size: context.displayLarge!.fontSize! * 5,
+                color: context.primaryColor.withAlpha(80),
+              )),
+          const SizedBox(
+            height: 50,
+          ),
+          Text(
+            'Permissions & Tokens',
+            style: context.displayLarge!
+                .copyWith(color: context.primaryColor.withAlpha(80)),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(
+            height: 150,
+          ),
+          Text(
+            _descriptions,
+            style: context.bodyLarge!.copyWith(color: Colors.white),
+            textAlign: TextAlign.justify,
+          ),
+          // const Expanded(child: SizedBox()),
+          ListTile(
+            trailing: TextButton.icon(
+              onPressed: null,
+              label: Text('Mint Flare'),
+              icon: const Icon(Icons.launch_outlined),
+            ),
+            leading: TextButton.icon(
+              onPressed: null,
+              label: Text('Request Permission'),
+              icon: const Icon(Icons.launch_outlined),
+            ),
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+        ])));
   }
 
   final _descriptions = '''
