@@ -70,6 +70,12 @@ class _LandingPageDesktopState extends State<LandingPageDesktop> {
               'Pricing',
             ),
           ),
+          TextButton.icon(
+              onPressed: null,
+              label: Text(
+                'Flarion',
+              ),
+              icon: const Icon(Icons.launch_outlined)),
           TextButton(
             onPressed: () async {
               _controller.jumpToPage(7);
@@ -180,7 +186,7 @@ class _HeadPage extends StatelessWidget {
                             ),
                             ListTile(
                               title: Text(
-                                'Florune on top of ContractFoundry',
+                                'Florune based on ContractFoundry',
                                 style: context.titleLarge!
                                     .copyWith(color: Colors.white),
                               ),
@@ -196,7 +202,7 @@ class _HeadPage extends StatelessWidget {
                                           _description,
                                           style: context.titleMedium!
                                               .copyWith(color: Colors.white),
-                                          textAlign: TextAlign.justify,
+                                          // textAlign: TextAlign.justify,
                                         )
                                       ],
                                     )),
@@ -239,7 +245,11 @@ class _HeadPage extends StatelessWidget {
   }
 
   final _description =
-      '''Florune is the inaugural application of the Contract Foundry ecosystem, a sovereign onchain jurisdiction for enterprise-grade agreements. This trustless, permissioned infrastructure converges decentralized identity, tamper-proof document verification, and non-custodial smart contracts to replace intermediary-dependent processes with immutable, executable logic.
+      '''Florune is the inaugural application of the Contract Foundry ecosystem, a sovereign onchain jurisdiction for enterprise-grade agreements.
+      
+This trustless, permissioned infrastructure converges decentralized identity, tamper-proof document verification, and non-custodial smart contracts to replace intermediary-dependent processes with immutable, executable logic.
 
-Within this environment, financial obligations are bound directly to verifiable actions. Onchain digital signatures autonomously control the flow of capital through P2P escrow and payments, ensuring execution is contingent solely upon cryptographically proven performance. The result is a closed-loop system that eliminates disputes by design, providing a court-admissible record of truth and establishing a new paradigm of operational integrity.''';
+Within this environment, financial obligations are bound directly to verifiable actions. Onchain digital signatures autonomously control the flow of capital through P2P escrow and payments, ensuring execution is contingent solely upon cryptographically proven performance.
+
+The result is a closed-loop system that eliminates disputes by design, providing a court-admissible record of truth and establishing a new paradigm of operational integrity.''';
 }

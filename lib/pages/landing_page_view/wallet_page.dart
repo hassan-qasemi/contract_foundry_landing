@@ -49,7 +49,7 @@ class __DesktopViewState extends State<_DesktopView> {
                     Text(
                       _descriptions,
                       style: context.bodyLarge!.copyWith(color: Colors.white),
-                      textAlign: TextAlign.justify,
+                      // textAlign: TextAlign.justify,
                     ),
                     const Expanded(child: SizedBox()),
                   ]))),
@@ -178,7 +178,7 @@ class __MobileViewState extends State<_MobileView> {
           Text(
             _descriptions,
             style: context.bodyLarge!.copyWith(color: Colors.white),
-            textAlign: TextAlign.justify,
+            // textAlign: TextAlign.justify,
           ),
           const SizedBox(
             height: 30,

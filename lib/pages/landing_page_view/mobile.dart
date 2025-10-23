@@ -3,7 +3,6 @@ import 'package:contract_foundry_landing_page/assets.dart';
 import 'package:contract_foundry_landing_page/config.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/background.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/about_page.dart';
-import 'package:contract_foundry_landing_page/pages/landing_page_view/social_links_widget.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/token_page.dart';
 import 'package:contract_foundry_landing_page/pages/landing_page_view/wallet_page.dart';
 import 'package:contract_foundry_landing_page/pages/pricing_page/pricing_page.dart';
@@ -77,6 +76,12 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
               onTap: () async {
                 _controller.jumpToPage(8);
               },
+            ),
+            ListTile(
+              title: Text('Flarion'),
+              onTap: null,
+              enabled: false,
+              trailing: const Icon(Icons.launch_outlined),
             ),
             ListTile(
               title: Text('Pricing'),
@@ -233,7 +238,7 @@ class _HeadPage extends StatelessWidget {
           SizedBox(height: 50),
           ListTile(
             title: Text(
-              'Florune on top of ContractFoundry',
+              'Florune based on ContractFoundry',
               style: context.titleLarge!.copyWith(color: Colors.white),
             ),
           ),

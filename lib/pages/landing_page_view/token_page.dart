@@ -41,20 +41,7 @@ class __DesktopviewState extends State<_Desktopview> {
                     Text(
                       _descriptions,
                       style: context.bodyLarge!.copyWith(color: Colors.white),
-                      textAlign: TextAlign.justify,
-                    ),
-                    const Expanded(child: SizedBox()),
-                    ListTile(
-                      trailing: TextButton.icon(
-                        onPressed: null,
-                        label: Text('Mint Flare'),
-                        icon: const Icon(Icons.launch_outlined),
-                      ),
-                      leading: TextButton.icon(
-                        onPressed: null,
-                        label: Text('Request Permission'),
-                        icon: const Icon(Icons.launch_outlined),
-                      ),
+                      // textAlign: TextAlign.justify,
                     ),
                     const Expanded(child: SizedBox()),
                   ]))),
@@ -92,14 +79,14 @@ class __DesktopviewState extends State<_Desktopview> {
   }
 
   final _descriptions = '''
-Flare: The Invitational Access Credential
+Flarion: The Access Credential
 
-Flare (\$FLR) represents an exclusive entry point to the Contract Foundry ecosystem's premium tier a stable-value ERC-20 token available by invitation only. This privileged access credential grants selected participants the unique ability to acquire Rune tokens, creating an ecosystem where advanced capabilities remain accessible only to vetted partners.
+Flarion (FLR) represents an exclusive entry point to the Contract Foundry ecosystem's premium tier a stable-value ERC-20 token available by invitation only. This privileged access credential grants selected participants the unique ability to acquire Rune tokens, creating an ecosystem where advanced capabilities remain accessible only to vetted partners.
 
 
 Rune:  The Sovereign Execution Asset
 
-Rune (\$Rune) Rune serves as the distinguished medium for high-value contractual execution an exclusive, non-transferable asset reserved for FLR credential holders. This elite instrument enables secure deployment of sophisticated operations including Pledge Contracts and Verifiable Documents, providing an elevated layer of transaction assurance while maintaining uncompromising standards for specialized service execution.
+Rune (RUNE) Rune serves as the distinguished medium for high-value contractual execution an exclusive, non-transferable asset reserved for FLR credential holders. This elite instrument enables secure deployment of sophisticated operations including Pledge Contracts and Verifiable Documents, providing an elevated layer of transaction assurance while maintaining uncompromising standards for specialized service execution.
 ''';
 }
 
@@ -147,20 +134,7 @@ class __MobileViewState extends State<_MobileView> {
           Text(
             _descriptions,
             style: context.bodyLarge!.copyWith(color: Colors.white),
-            textAlign: TextAlign.justify,
-          ),
-          // const Expanded(child: SizedBox()),
-          ListTile(
-            trailing: TextButton.icon(
-              onPressed: null,
-              label: Text('Mint Flare'),
-              icon: const Icon(Icons.launch_outlined),
-            ),
-            leading: TextButton.icon(
-              onPressed: null,
-              label: Text('Request Permission'),
-              icon: const Icon(Icons.launch_outlined),
-            ),
+            // textAlign: TextAlign.justify,
           ),
           const SizedBox(
             height: 50,
@@ -169,13 +143,13 @@ class __MobileViewState extends State<_MobileView> {
   }
 
   final _descriptions = '''
-Flare: The Invitational Access Credential
+Flarion: The Access Credential
 
-Flare (\$FLR) represents an exclusive entry point to the Contract Foundry ecosystem's premium tier a stable-value ERC-20 token available by invitation only. This privileged access credential grants selected participants the unique ability to acquire Rune tokens, creating an ecosystem where advanced capabilities remain accessible only to vetted partners.
+Flarion (FLR) represents an exclusive entry point to the Contract Foundry ecosystem's premium tier a stable-value ERC-20 token available by invitation only. This privileged access credential grants selected participants the unique ability to acquire Rune tokens, creating an ecosystem where advanced capabilities remain accessible only to vetted partners.
 
 
 Rune:  The Sovereign Execution Asset
 
-Rune (\$Rune) Rune serves as the distinguished medium for high-value contractual execution an exclusive, non-transferable asset reserved for FLR credential holders. This elite instrument enables secure deployment of sophisticated operations including Pledge Contracts and Verifiable Documents, providing an elevated layer of transaction assurance while maintaining uncompromising standards for specialized service execution.
+Rune (RUNE) Rune serves as the distinguished medium for high-value contractual execution an exclusive, non-transferable asset reserved for FLR credential holders. This elite instrument enables secure deployment of sophisticated operations including Pledge Contracts and Verifiable Documents, providing an elevated layer of transaction assurance while maintaining uncompromising standards for specialized service execution.
 ''';
 }

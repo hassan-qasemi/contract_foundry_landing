@@ -93,7 +93,10 @@ class __MovileViewState extends State<_MovileView> {
 
 Florune empowers sovereign control over digital agreements and payments. Our platform integrates non-custodial escrow, on-chain verification, and decentralized identity to enable secure, intermediary-free transactions. Every interaction executes through transparent smart contracts, creating a tamper-proof system where users maintain full control of assets and data.
 
-Florune embodies the principles of financial autonomy and censorship-resistant technology. We create tools for trustless transactions where users can securely manage agreements through decentralized storage and automated smart contracts, ensuring complete sovereignty over digital interactions.  ''';
+Florune embodies the principles of financial autonomy and censorship-resistant technology. We create tools for trustless transactions where users can securely manage agreements through decentralized storage and automated smart contracts, ensuring complete sovereignty over digital interactions.  
+
+The platform operates in a non-custodial manner, users retain full control over their assets and data. ContractFoundry is patent pending, designed, built and stablished by its Inventor. Patent-pending technology operated inventor as a sole proprietorship.
+''';
 }
 
 class _DesktopView extends StatefulWidget {
@@ -184,5 +187,8 @@ class __DesktopViewState extends State<_DesktopView> {
   final about = '''
 Florune empowers sovereign control over digital agreements and payments. Our platform integrates non-custodial escrow, on-chain verification, and decentralized identity to enable secure, intermediary-free transactions. Every interaction executes through transparent smart contracts, creating a tamper-proof system where users maintain full control of assets and data.
 
-Florune embodies the principles of financial autonomy and censorship-resistant technology. We create tools for trustless transactions where users can securely manage agreements through decentralized storage and automated smart contracts, ensuring complete sovereignty over digital interactions.  ''';
+Florune embodies the principles of financial autonomy and censorship-resistant technology. We create tools for trustless transactions where users can securely manage agreements through decentralized storage and automated smart contracts, ensuring complete sovereignty over digital interactions.  
+
+The platform operates in a non-custodial manner, users retain full control over their assets and data. ContractFoundry is patent pending, designed, built and stablished by its Inventor. Patent-pending technology operated inventor as a sole proprietorship.
+''';
 }
